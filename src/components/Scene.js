@@ -3,11 +3,11 @@ import React from 'react';
 export default class Scene extends React.Component {
 	constructor(props) {
 		super(props)
-		this.objects = []
+		this.objects = props.children
 	}
 
 	renderObjects = () => {
-		return (<div></div>)
+		return this.objects
 	}
 
 	render() {
