@@ -10,6 +10,7 @@ This game is being developed as a Google Summer of Code 2018 project under the I
 # Instructions to run the code
 
 npm install
+
 npm start 
 
 
