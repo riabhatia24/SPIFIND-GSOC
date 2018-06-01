@@ -13,7 +13,7 @@ npm install
 
 npm start 
 
-*To view level1, add "/level1" to the link (eg.localhost:8888/level1). Do the same for level 2, 3, 4 & 5.
+*To view level1, add "/level1" to the link (eg.localhost:8888/level1). Follow the same approach to view level 2, 3, 4 & 5.
 
 
 
