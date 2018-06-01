@@ -52,8 +52,8 @@ export default class Level1 extends React.Component {
 					<Sobject name={'painting'} xPos={726} yPos={80}>
 						<img src={Painting} height="150" />
 					</Sobject>
-					<Sobject name={'fan'} xPos={1246} yPos={140}>
-						<img src={Fan} height="250" />
+					<Sobject name={'fan'} xPos={1110} yPos={69}>
+						<img src={Fan} height="380" width="400" />
 					</Sobject>
 
 					
