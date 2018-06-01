@@ -13,7 +13,7 @@ import styles from "./app.sass"  // Css-module styles
 const App = () => (
   <div className='App'>
     <div>
-    	<Level3 />
+    	
     </div>
   </div>
 );
