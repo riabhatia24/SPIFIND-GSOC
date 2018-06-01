@@ -7,3 +7,10 @@ In a dark room, the player uses the flashlight to find and capture the spider.Th
 This game is being developed as a Google Summer of Code 2018 project under the Inclusive Design Institute.
 
 
+# Instructions to run the code
+
+npm install
+npm start 
+
+
+
