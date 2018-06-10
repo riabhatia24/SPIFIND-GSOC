@@ -14,6 +14,7 @@ import Towel from '../images/level3/Towel.png'
 import Still from '../images/level3/StillBubbles.png'
 import Ball from '../images/level3/Ball.png'
 import Fan from '../images/level3/Fan.png'
+import Spot from './Spotlight.js'
 
 
 
@@ -70,6 +71,8 @@ export default class Level3 extends React.Component {
 					<Sobject name={'brush'} xPos={1325} yPos={360}>
 						<img src={Brush} height="40" width="120" />
 					</Sobject>
+					<Spot height={200} width={200} color={'rgba(0,0,0,0.94)'} />
+
 					
 					
 

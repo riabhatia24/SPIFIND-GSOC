@@ -11,6 +11,7 @@ import Pen from '../images/level5/Pen.png'
 import Board from '../images/level5/Board.png'
 import Laptop from '../images/level5/Laptop.gif'
 import Book from '../images/level5/Book.gif'
+import Spot from './Spotlight.js'
 
 export default class Level5 extends React.Component {
 	constructor(props) {
@@ -50,6 +51,8 @@ export default class Level5 extends React.Component {
 					<Sobject name={'juice'} xPos={1210} yPos={390}>
 						<img src={Juice} height="110" width="80" />
 					</Sobject>
+				    <Spot height={200} width={200} color={'rgba(0,0,0,0.96)'} />
+
 
 					
 					

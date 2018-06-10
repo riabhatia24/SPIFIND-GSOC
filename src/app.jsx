@@ -1,4 +1,5 @@
 import React from 'react';
+import Intro from './levels/Intro.js';
 
 import 'normalize.css';
 
@@ -8,10 +9,8 @@ import styles from "./app.sass"  // Css-module styles
 
 const App = () => (
   <div className='App'>
-    <div>
-    	
-    </div>
-  </div>
+    <Intro />
+   </div>
 );
 
 export default App;

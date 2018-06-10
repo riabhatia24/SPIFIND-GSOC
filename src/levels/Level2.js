@@ -9,7 +9,7 @@ import Telephone from '../images/level2/Telephone.png'
 import Television from '../images/level2/Television.png'
 import Wall from '../images/level2/Wall.png'
 import Pokemon from '../images/level2/Pokemon.gif'
-
+import Spot from './Spotlight.js'
 
 
 
@@ -45,6 +45,7 @@ export default class Level2 extends React.Component {
 					<Sobject name={'telephone'} xPos={370} yPos={320}>
 						<img src={Telephone} height="100px" />
 					</Sobject>
+					<Spot height={200} width={200} color={'rgba(0,0,0,0.93)'} />
 
 
 

@@ -9,6 +9,7 @@ import Sticker from '../images/level4/Sticker.png'
 import Table from '../images/level4/Table.png'
 import Refrigerator from '../images/level4/Refrigerator.png'
 import Teapot from '../images/level4/Teapot.gif'
+import Spot from './Spotlight.js'
 
 
 
@@ -44,7 +45,8 @@ export default class Level4 extends React.Component {
 					<Sobject name={'sticker'} xPos={180} yPos={210}>
 						<img src={Sticker} height="100" width="100" />
 					</Sobject>
-					
+				    <Spot height={200} width={200} color={'rgba(0,0,0,0.95)'} />
+
 
 
 
