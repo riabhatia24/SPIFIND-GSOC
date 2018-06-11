@@ -20,10 +20,6 @@ export default class Level1 extends React.Component {
 		super(props)
 	}
 
-	click(){
-		console.log('hi')
-	}
-
 	render() {
 		return (
 			    <div>
@@ -32,7 +28,7 @@ export default class Level1 extends React.Component {
 				    
 				
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="755" width="1536" onClick={this.click.bind(this)}/>
+						<img src={Room} height="755" width="1536" />
 					</Sobject>
 					<Sobject name={'bed'} xPos={20} yPos={300}>
 						<img src={Bed} height="445" width="850" />
@@ -64,9 +60,8 @@ export default class Level1 extends React.Component {
 					<Sobject name={'fan'} xPos={1110} yPos={69}>
 						<img src={Fan} height="380" width="400" />
 					</Sobject>
-				
-					<Spot height={200} width={200} color={'rgba(0,0,0,0.92)'} />
-                   </Scene>
+				    <Spot height={200} width={200} color={'rgba(0,0,0,0.92)'} />
+                    </Scene>
 
 				
 				</div>
