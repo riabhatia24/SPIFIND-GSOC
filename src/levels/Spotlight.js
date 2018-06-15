@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 export default class Spot extends React.Component {
 
   constructor(props) {
@@ -16,12 +14,10 @@ export default class Spot extends React.Component {
     
   }
 
-
-
   render() {
     const { x, y } = this.state;
     return (
-       <div className={'spot'} onMouseMove={this._onMouseMove.bind(this)} style={{background:  `radial-gradient(${this.props.height}px ${this.props.width}px at ${x}px ${y}px , transparent 90%, ${this.props.color})` , top: '0' , bottom:'0', left:'0', right:'0', position: 'absolute'}}> 
+       <div className={'spot'} onMouseMove={this._onMouseMove.bind(this)} style={{background: `radial-gradient(${this.props.height}px ${this.props.width}px at ${x}px ${y}px , transparent 90%, ${this.props.color})`, top: '0', bottom: '0', left: '0', right: '0', position: 'absolute'}}> 
          {this.props.children}
         </div>
     );

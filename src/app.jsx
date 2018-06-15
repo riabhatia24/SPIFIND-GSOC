@@ -1,8 +1,6 @@
 import React from 'react';
 import Intro from './levels/Intro.js';
-
 import 'normalize.css';
-
 import "styles/base/_main.sass"  // Global styles
 import "styles/base/_common.sass"  // Global styles
 import styles from "./app.sass"  // Css-module styles
