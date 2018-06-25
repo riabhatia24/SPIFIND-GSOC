@@ -22,7 +22,7 @@ export default class Level2 extends React.Component {
 		return (
 				<Scene>
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="755" width="1536" />
+						<img src={Room} height="725" width="1536" />
 					</Sobject>
 					<Sobject name={'sofa'} xPos={20} yPos={240}>
 						<img src={Sofa} height="445" width="890"/>
@@ -31,21 +31,21 @@ export default class Level2 extends React.Component {
 						<img src={Wall} height="200" width="200"/>
 					</Sobject>
                     <Sobject name={'television'} xPos={905} yPos={200}>
-						<img src={Television} width="630" height="500" />
+						<img src={Television} width="620" height="480" />
 					</Sobject>
 					<Sobject name={'pokemon'} xPos={1005} yPos={220}>
 						<img src={Pokemon} height="190" width="430"  />
 					</Sobject>
-					<Sobject name={'cat'} xPos={890} yPos={450}>
-						<img src={Cat} width="300" height="300"/>
+					<Sobject name={'cat'} xPos={890} yPos={480}>
+						<img src={Cat} width="250" height="250"/>
 					</Sobject>
-					<Sobject name={'table'} xPos={370} yPos={370}>
+					<Sobject name={'table'} xPos={370} yPos={350}>
 						<img src={Table} height="380px" width="200"/>
 					</Sobject>
-					<Sobject name={'telephone'} xPos={370} yPos={320}>
+					<Sobject name={'telephone'} xPos={370} yPos={300}>
 						<img src={Telephone} height="100px" />
 					</Sobject>
-					<Spot height={200} width={200} color={'rgba(0,0,0,0.93)'} />
+					
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Intro from './levels/Intro.js';
+import Intro from './levels/Intro';
 import 'normalize.css';
 import "styles/base/_main.sass"  // Global styles
 import "styles/base/_common.sass"  // Global styles

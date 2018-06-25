@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import Scene from '../components/Scene'
 import Sobject from '../components/Object'
 import Room from '../images/level3/Main.png'
 import Bathtub from '../images/level3/Bathtub.png'
 import Brush from '../images/level3/Brush.png'
 import Bubbles from '../images/level3/Bubbles.gif'
-import Duck from '../images/level3/Duck.png'
+import Duck from '../images/level3/Duck.gif'
 import Handwash from '../images/level3/Handwash.png'
 import Laundry from '../images/level3/Laundry.png'
 import Seat from '../images/level3/Seat.png'
@@ -27,13 +27,13 @@ export default class Level3 extends React.Component {
 		return (
 				<Scene>
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="755" width="1536" />
+						<img src={Room} height="725" width="1536" />
 					</Sobject>
 					<Sobject name={'seat'} xPos={30} yPos={250}>
-						<img src={Seat} height="505" />
+						<img src={Seat} height="475" />
 					</Sobject>
 					<Sobject name={'Bathtub'} xPos={920} yPos={400}>
-						<img src={Bathtub} width="580"  />
+						<img src={Bathtub} width="560"  />
 					</Sobject>
 					<Sobject name={'sbubbles'} xPos={995} yPos={340}>
 						<img src={Still} height="180" width="180"  />
@@ -47,13 +47,13 @@ export default class Level3 extends React.Component {
 					<Sobject name={'bubbles'} xPos={1205} yPos={300}>
 						<img src={Bubbles} height="200" width="200"  />
 					</Sobject>
-					<Sobject name={'duck'} xPos={1140} yPos={425}>
-						<img src={Duck} height="100" width="100"  />
+					<Sobject name={'duck'} xPos={1120} yPos={325}>
+						<img src={Duck} height="200" width="200"  />
 					</Sobject>
 					<Sobject name={'towel'} xPos={750} yPos={200}>
 						<img src={Towel} height="200" width="200"/>
 					</Sobject>
-					<Sobject name={'ball'} xPos={550} yPos={600}>
+					<Sobject name={'ball'} xPos={550} yPos={580}>
 						<img src={Ball} height="130" width="130"/>
 					</Sobject>
 					<Sobject name={'laundry'} xPos={490} yPos={300}>
@@ -71,7 +71,7 @@ export default class Level3 extends React.Component {
 					<Sobject name={'brush'} xPos={1325} yPos={360}>
 						<img src={Brush} height="40" width="120" />
 					</Sobject>
-					<Spot height={200} width={200} color={'rgba(0,0,0,0.94)'} />
+					
 
 					
 					

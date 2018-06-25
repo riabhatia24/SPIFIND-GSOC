@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Scene from '../components/Scene'
 import Sobject from '../components/Object'
 import Room from '../images/level4/Room.png'
@@ -8,8 +8,10 @@ import Oven from '../images/level4/Oven.png'
 import Sticker from '../images/level4/Sticker.png'
 import Table from '../images/level4/Table.png'
 import Refrigerator from '../images/level4/Refrigerator.png'
-import Teapot from '../images/level4/Teapot.gif'
+import Cup from '../images/level4/Cup.gif'
 import Spot from './Spotlight.js'
+import Food from '../images/level4/Food.png'
+import Spoon from '../images/level4/Spoon.png'
 
 
 
@@ -22,16 +24,16 @@ export default class Level4 extends React.Component {
 		return (
 				<Scene>
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="755" width="1536" />
+						<img src={Room} height="725" width="1536" />
 					</Sobject>
-					<Sobject name={'Refrigerator'} xPos={30} yPos={150}>
-						<img src={Refrigerator} height="605" width="300" />
+					<Sobject name={'Refrigerator'} xPos={30} yPos={140}>
+						<img src={Refrigerator} height="580" width="300" />
 					</Sobject>
-					<Sobject name={'tabel'} xPos={350} yPos={225}>
+					<Sobject name={'tabel'} xPos={350} yPos={205}>
 						<img src={Table} height="530" width="530"/>
 					</Sobject>
-					<Sobject name={'teapot'} xPos={970} yPos={215}>
-						<img src={Teapot} height="200" width="200"/>
+					<Sobject name={'teapot'} xPos={950} yPos={235}>
+						<img src={Cup} height="150" width="150"/>
 					</Sobject>
 					<Sobject name={'oven'} xPos={1200} yPos={220}>
 						<img src={Oven} height="190"width="290" />
@@ -45,8 +47,13 @@ export default class Level4 extends React.Component {
 					<Sobject name={'sticker'} xPos={180} yPos={210}>
 						<img src={Sticker} height="100" width="100" />
 					</Sobject>
-				    <Spot height={200} width={200} color={'rgba(0,0,0,0.95)'} />
-
+					<Sobject name={'teapot'} xPos={1090} yPos={285}>
+						<img src={Food} height="90" width="130"/>
+					</Sobject>
+					<Sobject name={'teapot'} xPos={1125} yPos={248}>
+						<img src={Spoon} height="70" width="100"/>
+					</Sobject>
+				    
 
 
 

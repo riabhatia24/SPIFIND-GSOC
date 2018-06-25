@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 import Scene from '../components/Scene'
 import Sobject from '../components/Object'
 import Main from '../images/intro/Main.jpg'
 import House1 from '../images/intro/House1.png'
 import Tree from '../images/intro/Tree.png'
-import Light from '../images/intro/Light.gif'
+import Light from '../images/intro/Nlight2.gif'
 import Grass from '../images/intro/Grass.png'
 import Heading2 from '../images/intro/Heading2.png'
-import Light2 from '../images/intro/Light2.gif'
+import Light2 from '../images/intro/Nlight.gif'
 import Play from '../images/intro/Play.png'
-import Spider1 from '../images/intro/Spider1.gif'
+import Spider1 from '../images/intro/Spi.gif'
 import Text from '../images/intro/Text.png'
 import Spider2 from '../images/intro/spider1.png'
 import {Link} from 'react-router-dom'
@@ -18,6 +18,7 @@ import Play2 from '../images/intro/Play2.png'
 import Play3 from '../images/intro/Play3.png'
 import Play4 from '../images/intro/Play4.png'
 import Play5 from '../images/intro/Play5.png'
+
 
 
 
@@ -33,7 +34,7 @@ export default class Intro extends React.Component {
 
 				<Scene>
 				    <Sobject name={'main'} xPos={0} yPos={0}>
-						<img src={Main} height="755" width="1536" />
+						<img className="image" src={Main} height="755" width="1536" />
 					</Sobject>
 					<Sobject name={'house'} xPos={940} yPos={50}>
 						<img src={House1} height="705" width="590"  />
@@ -44,13 +45,14 @@ export default class Intro extends React.Component {
 					<Sobject name={'Spider'} xPos={125} yPos={380}>
 						<img src={Spider1} width="120" height="120"  />
 					</Sobject>
-					<Sobject name={'Spider'} xPos={270} yPos={400}>
-						<img src={Spider1} width="150" height="150"  />
+					<Sobject name={'Spider'} xPos={260} yPos={400}>
+						<img src={Spider1} width="130" height="130"  />
 					</Sobject>
 					<Sobject name={'light'} xPos={0} yPos={0}>
-						<img src={Light}   />
+						<img src={Light} width="160" height="200" />
 					</Sobject>
-					<Sobject name={'grass'} xPos={0} yPos={455}>
+
+				    <Sobject name={'grass'} xPos={0} yPos={455}>
 						<img src={Grass} height="300"  />
 					</Sobject>
 					<Sobject name={'grass'} xPos={430} yPos={455}>
@@ -66,10 +68,10 @@ export default class Intro extends React.Component {
 						<img src={Heading2}  />
 					</Sobject>
 					<Sobject name={'light2'} xPos={1368} yPos={0}>
-						<img src={Light2}   />
+						<img src={Light2} width="160" height="200" />
 					</Sobject>
                  
-                 <Link to="/level1">
+                 <Link to="/htp1">
     
                    <Sobject name={'playnow'} xPos={569} yPos={180}>
 						
@@ -117,6 +119,8 @@ export default class Intro extends React.Component {
 						<img src={Play5} />
                       </Sobject>
                       </Link>
+                      
+                     
                      
                      
                      
