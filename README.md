@@ -28,6 +28,10 @@ Know more about eye tracking here:- http://tiny.cc/eyegaze
 - npm start 
 
 
+## Want to use an eye-gaze?
+[Free Eye Tracking Software](https://imotions.com/blog/free-eye-tracking-software/)
+
+
 
 
 
