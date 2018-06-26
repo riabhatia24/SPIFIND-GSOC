@@ -2,7 +2,7 @@
 
 "Spifind-Spot the Spider" is a web game for kids who use eye-tracking equipment to play games.This game aims to provide opportunities for free exploration and helps assess the positioning and calibration skills of a child.
 
-In a dark room, the player uses the flashlight to find and capture the spider.The flashlight will be controlled by the movement of the their eyes. Dart the flashlight around the room and when it is on the spider, dwell/blink to capture it.
+In a dark room, the player uses the flashlight to find and capture the spider.The flashlight will be controlled by the movement of their eyes. Dart the flashlight around the room and when it is on the spider, dwell/blink to capture it.
 
 Know more about eye tracking here:- http://tiny.cc/eyegaze
 
@@ -21,15 +21,22 @@ Know more about eye tracking here:- http://tiny.cc/eyegaze
 
 
 ## To run
-*You'll need to have git and node installed in your system.*
+*You'll need to have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed in your system.*
 
-- Clone the Repository
-- npm install
-- npm start 
+- Clone the project
+`git clone https://github.com/riabhatia24/Spifind.git`
+
+- Then install the dependencies
+`npm install`
+
+- Run development server
+`npm start`
+
+Open the web browser to `http://localhost:8888/`
 
 
 ## Want to use an eye-gaze?
-- [Gaze Pointer](https://sourceforge.net/projects/gazepointer/)
+- [Gaze Pointer-Free Eye Tracking Software](https://sourceforge.net/projects/gazepointer/)
 - [Know More Here](https://imotions.com/blog/free-eye-tracking-software/)
 
 
