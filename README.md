@@ -29,7 +29,8 @@ Know more about eye tracking here:- http://tiny.cc/eyegaze
 
 
 ## Want to use an eye-gaze?
-[Free Eye Tracking Software](https://imotions.com/blog/free-eye-tracking-software/)
+- [Gaze Pointer](https://sourceforge.net/projects/gazepointer/)
+- [Know More Here](https://imotions.com/blog/free-eye-tracking-software/)
 
 
 
