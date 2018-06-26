@@ -51,6 +51,7 @@ export default class Level5 extends React.Component {
 					<Sobject name={'juice'} xPos={1210} yPos={380}>
 						<img src={Juice} height="110" width="80" />
 					</Sobject>
+					<Spot height={200} width={200} color={'rgba(0,0,0,0.98)'} />
 				    
 
 

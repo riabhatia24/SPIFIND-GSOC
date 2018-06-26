@@ -53,6 +53,7 @@ export default class Level4 extends React.Component {
 					<Sobject name={'teapot'} xPos={1125} yPos={248}>
 						<img src={Spoon} height="70" width="100"/>
 					</Sobject>
+					<Spot height={200} width={200} color={'rgba(0,0,0,0.97)'} />
 				    
 
 
