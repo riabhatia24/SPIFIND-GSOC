@@ -10,8 +10,6 @@ import Television from '../images/level2/Television.png'
 import Wall from '../images/level2/Wall.png'
 import Pokemon from '../images/level2/Pokemon.gif'
 import Spot from './Spotlight.js'
-import ReactAudioPlayer from 'react-audio-player';
-import Music from '../audio/Level.mp3'
 
 
 
@@ -23,7 +21,7 @@ export default class Level2 extends React.Component {
 	render() {
 		return (
 				<Scene>
-				    <ReactAudioPlayer src={Music} autoPlay controls volume={1} />
+				   
 					<Sobject name={'room'} xPos={0} yPos={0}>
 						<img src={Room} height="725" width="1536" />
 					</Sobject>
