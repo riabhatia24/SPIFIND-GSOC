@@ -41,6 +41,11 @@ module.exports = [
     use: ["file-loader"]
   },
   {
+    test: /\.mp3$/,
+    include: path.resolve(__dirname, 'src'),
+     use: ["file-loader"]
+},
+  {
     test: /\.(woff|woff2)$/,
     exclude: path.resolve(__dirname, "node_modules"),
     use: [
@@ -137,6 +142,8 @@ module.exports = [
       }
     ]
   },
+
+
   // Global SASS (from app)
   // ===============================
   // Do not modularize these imports

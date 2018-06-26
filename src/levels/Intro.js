@@ -18,6 +18,8 @@ import Play2 from '../images/intro/Play2.png'
 import Play3 from '../images/intro/Play3.png'
 import Play4 from '../images/intro/Play4.png'
 import Play5 from '../images/intro/Play5.png'
+import ReactAudioPlayer from 'react-audio-player'
+import Title from '../audio/Title.mp3'
 
 
 
@@ -33,6 +35,7 @@ export default class Intro extends React.Component {
 			    <div>
 
 				<Scene>
+				    <ReactAudioPlayer src={Title} autoPlay controls loop volume={1}/>
 				    <Sobject name={'main'} xPos={0} yPos={0}>
 						<img className="image" src={Main} height="755" width="1536" />
 					</Sobject>
