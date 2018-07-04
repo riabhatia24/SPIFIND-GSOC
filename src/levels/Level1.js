@@ -6,15 +6,18 @@ import Bed from '../images/level1/Bed.png'
 import Duck from '../images/level1/Duck.png'
 import Toy1 from '../images/level1/Toy1.png'
 import Window from '../images/level1/Window2.jpg'
-import Toy3 from '../images/level1/Toy2.gif'
 import Curtain from '../images/level1/Curtain.png'
 import Vase from '../images/level1/Vase.png'
 import Painting from '../images/level1/Painting.jpg'
-import Book from '../images/level1/Book.gif'
 import Aqua from '../images/level1/aqua.gif'
+import Horse from '../images/level1/Horse.png'
+import Car from '../images/level1/Car.png'
 import Spot from './Spotlight.js'
 import ReactAudioPlayer from 'react-audio-player';
 import Music from '../audio/Level.mp3'
+import Score from '../score/Score.js'
+import Countdown from 'react-countdown-now';
+import Gameover1 from '../score/Gameover.js'
 
 
 
@@ -22,6 +25,9 @@ import Music from '../audio/Level.mp3'
 export default class Level1 extends React.Component {
 	constructor(props) {
 		super(props)
+		this.state = {
+			count: 0
+		}
 	}
      
 
@@ -31,9 +37,9 @@ export default class Level1 extends React.Component {
                 	
 				<Scene>
 				    
-				    <ReactAudioPlayer src={Music} autoPlay controls loop volume={1}/>
+				    
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="725" width="1536" />
+						<img src={Room} height="755" width="1536" />
 					</Sobject>
 					<Sobject name={'bed'} xPos={20} yPos={280}>
 						<img src={Bed} height="445" width="850"/>
@@ -45,19 +51,19 @@ export default class Level1 extends React.Component {
 						<img src={Curtain} height="200" width="320" />
 					</Sobject>
 					<Sobject name={'vase'} xPos={1000} yPos={100}>
-						<img src={Vase} height="300"/>
+						<img className={'vase'} src={Vase} height="300"/>
 					</Sobject>
 					<Sobject name={'duck'} xPos={30} yPos={570}>
 						<img src={Duck} height="150" />
 					</Sobject>
-					<Sobject name={'toy1'} xPos={950} yPos={420}>
-						<img src={Toy1} height="300" />
+					<Sobject name={'toy1'} xPos={870} yPos={520}>
+						<img src={Car} className={'ted'} height="200" width="350" />
 					</Sobject>
-					<Sobject name={'toy3'} xPos={1180} yPos={400}>
-						<img src={Toy3} height="300" width="320" />
+					<Sobject name={'toy3'} xPos={1220} yPos={440}>
+						<img src={Horse} className={'horse'} height="250" width="280" />
 					</Sobject>
-                    <Sobject name={'book'} xPos={380} yPos={410}>
-						<img src={Book} height="120" />
+                    <Sobject name={'toy1'} xPos={380} yPos={270}>
+						<img src={Toy1} height="250" width="200" />
 					</Sobject>
 					<Sobject name={'painting'} xPos={726} yPos={80}>
 						<img src={Painting} height="150" />
@@ -65,10 +71,20 @@ export default class Level1 extends React.Component {
 					<Sobject name={'Aqua'} xPos={1230} yPos={169}>
 						<img src={Aqua} height="230" width="230" />
 					</Sobject>
-					
-				
 					<Spot height={200} width={200} color={'rgba(0,0,0,0.91)'} />
-					
+					<Sobject name={'score'} xPos={1360} yPos={670}>
+						<Score count={this.state.count}/>
+					</Sobject>
+					<Sobject name={'score'} xPos={50} yPos={670}>
+						<h1>Timer-</h1>
+					</Sobject>
+					<Sobject name={'score'} xPos={160} yPos={708}>
+						<Countdown date={Date.now() + 511000}>
+                         <Gameover1 score={this.state.count} />
+                         </Countdown>
+
+					</Sobject>
+
                     </Scene>
 
 				

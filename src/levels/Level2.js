@@ -10,12 +10,18 @@ import Television from '../images/level2/Television.png'
 import Wall from '../images/level2/Wall.png'
 import Pokemon from '../images/level2/Pokemon.gif'
 import Spot from './Spotlight.js'
+import Score from '../score/Score.js'
+import Countdown from 'react-countdown-now';
+import Gameover1 from '../score/Gameover.js'
 
 
 
 export default class Level2 extends React.Component {
 	constructor(props) {
 		super(props)
+		this.state = {
+			count: 0
+		}
 	}
 
 	render() {
@@ -47,6 +53,18 @@ export default class Level2 extends React.Component {
 						<img src={Telephone} height="100px" />
 					</Sobject>
 					<Spot height={200} width={200} color={'rgba(0,0,0,0.94)'} />
+					<Sobject name={'score'} xPos={1360} yPos={670}>
+						<Score count={this.state.count}/>
+					</Sobject>
+					<Sobject name={'score'} xPos={50} yPos={670}>
+						<h1>Timer-</h1>
+					</Sobject>
+					<Sobject name={'score'} xPos={160} yPos={708}>
+						<Countdown date={Date.now() + 456000}>
+                         <Gameover1 score={this.state.count} />
+                         </Countdown>
+
+					</Sobject>
 					
 
 

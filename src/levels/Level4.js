@@ -12,12 +12,18 @@ import Cup from '../images/level4/Cup.gif'
 import Spot from './Spotlight.js'
 import Food from '../images/level4/Food.png'
 import Spoon from '../images/level4/Spoon.png'
+import Score from '../score/Score.js'
+import Countdown from 'react-countdown-now';
+import Gameover1 from '../score/Gameover.js'
 
 
 
 export default class Level4 extends React.Component {
 	constructor(props) {
 		super(props)
+		this.state = {
+			count: 0
+		}
 	}
 
 	render() {
@@ -54,6 +60,19 @@ export default class Level4 extends React.Component {
 						<img src={Spoon} height="70" width="100"/>
 					</Sobject>
 					<Spot height={200} width={200} color={'rgba(0,0,0,0.97)'} />
+					<Sobject name={'score'} xPos={1360} yPos={670}>
+						<Score count={this.state.count}/>
+					</Sobject>
+					<Sobject name={'score'} xPos={50} yPos={670}>
+						<h1>Timer-</h1>
+					</Sobject>
+					<Sobject name={'score'} xPos={160} yPos={708}>
+						<Countdown date={Date.now() + 276000}>
+                         <Gameover1 score={this.state.count} />
+                         </Countdown>
+
+					</Sobject>
+					
 				    
 
 

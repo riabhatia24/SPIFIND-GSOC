@@ -3,6 +3,8 @@ import Intro from './levels/Intro';
 import 'normalize.css';
 import "styles/base/_main.sass"  // Global styles
 import "styles/base/_common.sass"  // Global styles
+import "styles/base/_common2.sass"  // Global styles
+import "styles/base/_buttons.sass"  // Global styles
 import styles from "./app.sass"  // Css-module styles
 
 const App = () => (

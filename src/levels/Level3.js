@@ -15,12 +15,18 @@ import Still from '../images/level3/StillBubbles.png'
 import Ball from '../images/level3/Ball.png'
 import Fan from '../images/level3/Fan.png'
 import Spot from './Spotlight.js'
+import Score from '../score/Score.js'
+import Countdown from 'react-countdown-now';
+import Gameover1 from '../score/Gameover.js'
 
 
 
 export default class Level3 extends React.Component {
 	constructor(props) {
 		super(props)
+		this.state = {
+			count: 0
+		}
 	}
 
 	render() {
@@ -72,6 +78,19 @@ export default class Level3 extends React.Component {
 						<img src={Brush} height="40" width="120" />
 					</Sobject>
 					<Spot height={200} width={200} color={'rgba(0,0,0,0.95)'} />
+                    <Sobject name={'score'} xPos={1360} yPos={670}>
+						<Score count={this.state.count}/>
+					</Sobject>
+					<Sobject name={'score'} xPos={50} yPos={670}>
+						<h1>Timer-</h1>
+					</Sobject>
+					<Sobject name={'score'} xPos={160} yPos={708}>
+						<Countdown date={Date.now() + 336000}>
+                         <Gameover1 score={this.state.count} />
+                         </Countdown>
+
+					</Sobject>
+					
 					
 
 					

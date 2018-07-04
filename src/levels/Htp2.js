@@ -1,53 +1,70 @@
 import React from 'react'
 import Scene from '../components/Scene'
 import Sobject from '../components/Object'
-import Spot from '../images/htp/Spotit.gif'
-import Info from '../images/htp/Info2.png'
+import Test from '../images/htp/Check2.gif'
+import Info from '../images/htp/Step3.png'
 import Wall from '../images/htp/wallpaper.png'
-import Ted from '../images/htp/Ted2.gif'
-import Button1 from '../images/htp/Button1.png'
-import Button2 from '../images/htp/Button2.png'
+import Ted from '../images/htp/Check.gif'
+import Black from '../images/htp/Black.png'
+import Htp from '../images/htp/Heading2.png'
 import {Link} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 
 
-export default class Htp2 extends React.Component {
+class Htp2 extends React.Component {
 	constructor(props) {
 		super(props)
 	}
-
+    link1(){
+	this.interval=setTimeout(() =>this.props.history.push('/htp3'), 8000)
+    }
+    link2(){
+	this.interval=setTimeout(() =>this.props.history.push('/htp2'), 8000)
+    }
+    remove(){
+		clearTimeout(this.interval)
+	}
+	
 	
 	render() {
 		return (
 			    <div>
 
+				
 				<Scene>
 				    <Sobject name={'main'} xPos={0} yPos={0}>
-						<img className="image" src={Wall} height="755" width="1536" />
+						<img src={Wall} height="755" width="1536" />
 					</Sobject>
-					<Sobject name={'main'} xPos={50} yPos={178}>
-						<img className="image" src={Spot} height="560" width="1000" />
+					<Sobject name={'ted'} xPos={50} yPos={198}>
+						<img src={Black} height="530" width="1448" />
 					</Sobject>
-					 <Sobject name={'main'} xPos={1090} yPos={220}>
-						<img className="image" src={Ted} height="300" width="400" />
+					 <Sobject name={'ted'} xPos={960} yPos={270}>
+						<img src={Ted} height="390" width="534" />
 					</Sobject>
-				    <Sobject name={'main'} xPos={20} yPos={40}>
-						<img className="image" src={Info}/>
+					 <Sobject name={'test'} xPos={50} yPos={198}>
+						<img src={Test} height="530" width="894" />
 					</Sobject>
+					<Sobject name={'htp'} xPos={580} yPos={10}>
+						<img src={Htp}/>
+					</Sobject>
+					<Sobject name={'info'} xPos={20} yPos={105}>
+						<img src={Info}/>
+					</Sobject>
+					
+					<Link to="/htp3">
+					<Sobject name={'htp'} xPos={1305} yPos={35}>
+						<button className={'button'} onMouseOver={this.link1.bind(this)} onMouseOut={this.remove.bind(this)}>NEXT &rarr;</button>
+					</Sobject>
+					</Link>
+
+					<Link to="/htp1">
+                    <Sobject name={'htp'} xPos={15} yPos={35}>
+						<button className={'button'} onMouseOver={this.link2.bind(this)} onMouseOut={this.remove.bind(this)}>&larr; BACK</button>
+					</Sobject>
+					</Link>
+                   
                      
-                    <Link to="/htp1">
-					 <Sobject name={'main'} xPos={1120} yPos={550}>
-						<img  src={Button1} height="150" width="150" />
-					</Sobject>
-					</Link>
-					 <Link to="/level1">
-					 <Sobject name={'main'} xPos={1320} yPos={550}>
-						<img  src={Button2} height="150" width="150" />
-					</Sobject>
-					</Link>
-                    
-                    
-                                 
                      
                      
                         
@@ -56,3 +73,4 @@ export default class Htp2 extends React.Component {
 			)
 	}
 }
+export default withRouter(Htp2)

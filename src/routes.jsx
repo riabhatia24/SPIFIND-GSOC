@@ -11,6 +11,8 @@ import Level4 from './levels/Level4';
 import Level5 from './levels/Level5';
 import Htp1 from './levels/Htp1';
 import Htp2 from './levels/Htp2';
+import Htp3 from './levels/Htp3';
+
 
 const Routes = () => (
   <Router>
@@ -23,6 +25,7 @@ const Routes = () => (
       <Route exact path="/level5" component={Level5}/>
       <Route exact path="/htp1" component={Htp1}/>
       <Route exact path="/htp2" component={Htp2}/>
+      <Route exact path="/htp3" component={Htp3}/>
     </div>
   </Router>
 );
