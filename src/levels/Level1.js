@@ -37,7 +37,7 @@ export default class Level1 extends React.Component {
                 	
 				<Scene>
 				    
-				    
+				     <ReactAudioPlayer src={Music} controls loop volume={0.3} autoPlay/>
 					<Sobject name={'room'} xPos={0} yPos={0}>
 						<img src={Room} height="755" width="1536" />
 					</Sobject>
