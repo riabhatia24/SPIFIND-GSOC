@@ -10,7 +10,7 @@ class Gameover1 extends React.Component{
     }
 
     link(){
-	this.interval=setTimeout(() =>this.props.history.push('/'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/'), 10000)
     }
     remove(){
 		clearTimeout(this.interval)

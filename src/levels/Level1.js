@@ -18,6 +18,7 @@ import Music from '../audio/Level.mp3'
 import Score from '../score/Score.js'
 import Countdown from 'react-countdown-now';
 import Gameover1 from '../score/Gameover.js'
+import Board from './test.js'
 
 
 
@@ -27,11 +28,11 @@ export default class Level1 extends React.Component {
 		super(props)
 		this.state = {
 			count: 0
+			
 		}
 	}
-     
-
-	render() {
+    
+   render() {
 		return (
 			    <div>
                 	
@@ -71,7 +72,7 @@ export default class Level1 extends React.Component {
 					<Sobject name={'Aqua'} xPos={1230} yPos={169}>
 						<img src={Aqua} height="230" width="230" />
 					</Sobject>
-					<Spot height={200} width={200} color={'rgba(0,0,0,0.91)'} />
+					 <Spot height={200} width={200} color={'rgba(0,0,0,0.91)'} />
 					<Sobject name={'score'} xPos={1360} yPos={670}>
 						<Score count={this.state.count}/>
 					</Sobject>

@@ -20,22 +20,22 @@ class Intro extends React.Component {
 	}
 
     link(){
-	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 10000)
     }
     link1(){
-	this.interval=setTimeout(() =>this.props.history.push('/level1'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/level1'), 10000)
     }
     link2(){
-	this.interval=setTimeout(() =>this.props.history.push('/level2'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/level2'), 10000)
     }
     link3(){
-	this.interval=setTimeout(() =>this.props.history.push('/level3'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/level3'), 10000)
     }
     link4(){
-	this.interval=setTimeout(() =>this.props.history.push('/level4'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/level4'), 10000)
     }
     link5(){
-	this.interval=setTimeout(() =>this.props.history.push('/level5'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/level5'), 10000)
     }
     remove(){
 		clearTimeout(this.interval)
@@ -82,7 +82,7 @@ class Intro extends React.Component {
                 
                       <Link to="/htp1">
                       <Sobject name={'playnow'} xPos={599} yPos={180}>
-						 <button className={'mainbutton1'} onMouseOver={this.link.bind(this)} onMouseOut={this.remove.bind(this)}>How to Play?</button>
+						 <button className={'mainbutton1'} onMouseEnter={this.link.bind(this)} onMouseLeave={this.remove.bind(this)}>How to Play?</button>
 						</Sobject>
                       </Link>
                        <Sobject name={'spider'} xPos={549} yPos={148}>
@@ -91,33 +91,33 @@ class Intro extends React.Component {
                       <Link to="/level1">
                       <Sobject name={'playnow'} xPos={618} yPos={290}>
 						
-						<button className={'mainbutton2'} onMouseOver={this.link1.bind(this)} onMouseOut={this.remove.bind(this)}>Level-1</button>
+						<button className={'mainbutton2'} onMouseEnter={this.link1.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-1</button>
                       </Sobject>
                       </Link>
                       <Link to="/level2">
                       <Sobject name={'playnow'} xPos={618} yPos={360}>
 						
-						<button className={'mainbutton2'} onMouseOver={this.link2.bind(this)} onMouseOut={this.remove.bind(this)}>Level-2</button>
+						<button className={'mainbutton2'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-2</button>
                       </Sobject>
                       </Link>
                       <Link to="/level3">
                       <Sobject name={'playnow'} xPos={618} yPos={430}>
 						
-						<button className={'mainbutton2'} onMouseOver={this.link3.bind(this)} onMouseOut={this.remove.bind(this)}>Level-3</button>
+						<button className={'mainbutton2'} onMouseEnter={this.link3.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-3</button>
                       </Sobject>
                       </Link>
                       
                       <Link to="/level4">
                       <Sobject name={'playnow'} xPos={618} yPos={500}>
 						
-						<button className={'mainbutton2'} onMouseOver={this.link4.bind(this)} onMouseOut={this.remove.bind(this)}>Level-4</button>
+						<button className={'mainbutton2'} onMouseEnter={this.link4.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-4</button>
                       </Sobject>
                       </Link>
                       
                       <Link to="/level5">
                        <Sobject name={'playnow'} xPos={618} yPos={570}>
 						
-						<button className={'mainbutton2'} onMouseOver={this.link5.bind(this)} onMouseOut={this.remove.bind(this)}>Level-5</button>
+						<button className={'mainbutton2'} onMouseEnter={this.link5.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-5</button>
                       </Sobject>
                       </Link>
                      

@@ -17,10 +17,10 @@ class Htp2 extends React.Component {
 		super(props)
 	}
     link1(){
-	this.interval=setTimeout(() =>this.props.history.push('/htp3'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/htp3'), 10000)
     }
     link2(){
-	this.interval=setTimeout(() =>this.props.history.push('/htp2'), 8000)
+	this.interval=setTimeout(() =>this.props.history.push('/htp2'), 10000)
     }
     remove(){
 		clearTimeout(this.interval)
@@ -54,13 +54,13 @@ class Htp2 extends React.Component {
 					
 					<Link to="/htp3">
 					<Sobject name={'htp'} xPos={1305} yPos={35}>
-						<button className={'button'} onMouseOver={this.link1.bind(this)} onMouseOut={this.remove.bind(this)}>NEXT &rarr;</button>
+						<button className={'button'} onMouseEnter={this.link1.bind(this)} onMouseLeave={this.remove.bind(this)}>NEXT &rarr;</button>
 					</Sobject>
 					</Link>
 
 					<Link to="/htp1">
                     <Sobject name={'htp'} xPos={15} yPos={35}>
-						<button className={'button'} onMouseOver={this.link2.bind(this)} onMouseOut={this.remove.bind(this)}>&larr; BACK</button>
+						<button className={'button'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>&larr; BACK</button>
 					</Sobject>
 					</Link>
                    
