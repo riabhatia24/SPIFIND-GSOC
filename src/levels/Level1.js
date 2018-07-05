@@ -18,7 +18,7 @@ import Music from '../audio/Level.mp3'
 import Score from '../score/Score.js'
 import Countdown from 'react-countdown-now';
 import Gameover1 from '../score/Gameover.js'
-import Board from './test.js'
+
 
 
 
