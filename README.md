@@ -6,18 +6,18 @@ In a dark room, the player uses the flashlight to find and capture the spider.Th
 
 Know more about eye tracking here:- http://tiny.cc/eyegaze
 
-**This game is being developed as a _Google Summer of Code_ 2018 project under the _Inclusive Design Institute_.**
+**This game is being developed as a [Google Summer of Code 2018](https://summerofcode.withgoogle.com/) project under the [Inclusive Design Institute](https://inclusivedesign.ca/).**
 
 
 ## What are we using
-- React 16
-- Webpack 3
-- React Router 4
-- SASS
-- Babel Cli
-- Hot Module Reloading
-- Jest 21
-- Enzyme 3 for testing
+- [React 16](https://reactjs.org/) 
+- [Webpack 3](https://webpack.js.org/)
+- [React Router 4](https://reacttraining.com/react-router/core/guides/philosophy)
+- [SASS](https://sass-lang.com/)
+- [Babel Cli](https://babeljs.io/docs/en/babel-cli.html)
+- [Hot Module Reloading](https://webpack.js.org/concepts/hot-module-replacement/)
+- [Jest 21](https://jestjs.io/docs/en/tutorial-react)
+- [Enzyme 3 for testing](https://github.com/airbnb/enzyme)
 
 
 ## To run
