@@ -13,8 +13,7 @@ import Aqua from '../images/level1/aqua.gif'
 import Horse from '../images/level1/Horse.png'
 import Car from '../images/level1/Car.png'
 import Spot from './Spotlight.js'
-import ReactAudioPlayer from 'react-audio-player';
-import Music from '../audio/Level.mp3'
+
 import Score from '../score/Score.js'
 import Countdown from 'react-countdown-now';
 import Gameover1 from '../score/Gameover.js'
@@ -39,7 +38,7 @@ export default class Level1 extends React.Component {
                 	
 				<Scene>
 				    
-				     <ReactAudioPlayer src={Music} controls loop volume={0.2} autoPlay/>
+				     
 					<Sobject name={'room'} xPos={0} yPos={0}>
 						<img src={Room} height="755" width="1536" />
 					</Sobject>
