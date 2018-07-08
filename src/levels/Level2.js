@@ -9,7 +9,6 @@ import Telephone from '../images/level2/Phone.gif'
 import Television from '../images/level2/Television.png'
 import Wall from '../images/level2/Wall.png'
 import Pokemon from '../images/level2/Pokemon.gif'
-import Headset from '../images/level2/Headset.png'
 import Spot from './Spotlight.js'
 import Score from '../score/Score.js'
 import Countdown from 'react-countdown-now';
