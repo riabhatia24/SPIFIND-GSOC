@@ -18,13 +18,16 @@ class Htp3 extends React.Component {
 		super(props)
 	}
     link1(){
-	this.interval=setTimeout(() =>this.props.history.push('/htp2'), 10000)
+	this.interval=setTimeout(() =>this.props.history.push('/'), 3500)
+	console.log('mouseenter')
     }
     link2(){
-	this.interval=setTimeout(() =>this.props.history.push('/level1'), 10000)
+	this.interval=setTimeout(() =>this.props.history.push('/level1'), 3500)
+	
     }
     remove(){
 		clearTimeout(this.interval)
+		console.log('mouseleave')
 	}
 	
 	
@@ -65,7 +68,7 @@ class Htp3 extends React.Component {
 					</Link>
 					<Link to="/level1">
 					<Sobject name={'info'} xPos={1100} yPos={285}>
-						<button className={'button2'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>NEXT &rarr;</button>
+						<button className={'button2'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>LEVEL-1 &rarr;</button>
 					</Sobject>
 					</Link>
 					<Sobject name={'info'} xPos={1290} yPos={0}>

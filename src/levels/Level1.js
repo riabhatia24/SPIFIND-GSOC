@@ -23,6 +23,7 @@ import Gameover1 from '../score/Gameover.js'
 
 
 
+
 export default class Level1 extends React.Component {
 	constructor(props) {
 		super(props)
@@ -38,7 +39,7 @@ export default class Level1 extends React.Component {
                 	
 				<Scene>
 				    
-				     <ReactAudioPlayer src={Music} controls loop volume={0.3} autoPlay/>
+				     <ReactAudioPlayer src={Music} controls loop volume={0.2} autoPlay/>
 					<Sobject name={'room'} xPos={0} yPos={0}>
 						<img src={Room} height="755" width="1536" />
 					</Sobject>
@@ -58,7 +59,7 @@ export default class Level1 extends React.Component {
 						<img src={Duck} height="150" />
 					</Sobject>
 					<Sobject name={'toy1'} xPos={870} yPos={520}>
-						<img src={Car} className={'ted'} height="200" width="350" />
+						<img src={Car} className={'car'} height="200" width="350" />
 					</Sobject>
 					<Sobject name={'toy3'} xPos={1220} yPos={440}>
 						<img src={Horse} className={'horse'} height="250" width="280" />
@@ -73,13 +74,13 @@ export default class Level1 extends React.Component {
 						<img src={Aqua} height="230" width="230" />
 					</Sobject>
 					 <Spot height={200} width={200} color={'rgba(0,0,0,0.91)'} />
-					<Sobject name={'score'} xPos={1360} yPos={670}>
+					<Sobject name={'score'} xPos={1360} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'score'} xPos={50} yPos={670}>
-						<h1>Timer-</h1>
+					<Sobject name={'score'} xPos={40} yPos={640}>
+						<h1  className={'score'}>Timer-</h1>
 					</Sobject>
-					<Sobject name={'score'} xPos={160} yPos={708}>
+					<Sobject name={'score'} xPos={150} yPos={678}>
 						<Countdown date={Date.now() + 511000}>
                          <Gameover1 score={this.state.count} />
                          </Countdown>

@@ -20,22 +20,22 @@ class Intro extends React.Component {
 	}
 
     link(){
-	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 10000)
+	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 3500)
     }
     link1(){
-	this.interval=setTimeout(() =>this.props.history.push('/level1'), 10000)
+	this.interval=setTimeout(() =>this.props.history.push('/level1'), 3500)
     }
     link2(){
-	this.interval=setTimeout(() =>this.props.history.push('/level2'), 10000)
+	this.interval=setTimeout(() =>this.props.history.push('/level2'), 3500)
     }
     link3(){
-	this.interval=setTimeout(() =>this.props.history.push('/level3'), 10000)
+	this.interval=setTimeout(() =>this.props.history.push('/level3'), 35000)
     }
     link4(){
-	this.interval=setTimeout(() =>this.props.history.push('/level4'), 10000)
+	this.interval=setTimeout(() =>this.props.history.push('/level4'), 3500)
     }
     link5(){
-	this.interval=setTimeout(() =>this.props.history.push('/level5'), 10000)
+	this.interval=setTimeout(() =>this.props.history.push('/level5'), 3500)
     }
     remove(){
 		clearTimeout(this.interval)
@@ -75,17 +75,17 @@ class Intro extends React.Component {
 					<Sobject name={'grass'} xPos={1080} yPos={455}>
 						<img src={Grass}  height="300" />
 					</Sobject>
-					<Sobject name={'heading'} xPos={470} yPos={10}>
+					<Sobject name={'heading'} xPos={470} yPos={2}>
 						<img src={Heading2}  />
 					</Sobject>
 					
                 
                       <Link to="/htp1">
-                      <Sobject name={'playnow'} xPos={599} yPos={180}>
+                      <Sobject name={'playnow'} xPos={570} yPos={165}>
 						 <button className={'mainbutton1'} onMouseEnter={this.link.bind(this)} onMouseLeave={this.remove.bind(this)}>How to Play?</button>
 						</Sobject>
                       </Link>
-                       <Sobject name={'spider'} xPos={549} yPos={148}>
+                       <Sobject name={'spider'} xPos={529} yPos={148}>
 						<img src={Spider2} height="100" width="100" />
                       </Sobject>
                       <Link to="/level1">
@@ -95,27 +95,27 @@ class Intro extends React.Component {
                       </Sobject>
                       </Link>
                       <Link to="/level2">
-                      <Sobject name={'playnow'} xPos={618} yPos={360}>
+                      <Sobject name={'playnow'} xPos={618} yPos={380}>
 						
 						<button className={'mainbutton2'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-2</button>
                       </Sobject>
                       </Link>
                       <Link to="/level3">
-                      <Sobject name={'playnow'} xPos={618} yPos={430}>
+                      <Sobject name={'playnow'} xPos={618} yPos={470}>
 						
 						<button className={'mainbutton2'} onMouseEnter={this.link3.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-3</button>
                       </Sobject>
                       </Link>
                       
                       <Link to="/level4">
-                      <Sobject name={'playnow'} xPos={618} yPos={500}>
+                      <Sobject name={'playnow'} xPos={618} yPos={560}>
 						
 						<button className={'mainbutton2'} onMouseEnter={this.link4.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-4</button>
                       </Sobject>
                       </Link>
                       
                       <Link to="/level5">
-                       <Sobject name={'playnow'} xPos={618} yPos={570}>
+                       <Sobject name={'playnow'} xPos={618} yPos={650}>
 						
 						<button className={'mainbutton2'} onMouseEnter={this.link5.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-5</button>
                       </Sobject>

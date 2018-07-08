@@ -13,11 +13,13 @@ import Shampoo from '../images/level3/Shampoo.png'
 import Towel from '../images/level3/Towel.png'
 import Still from '../images/level3/StillBubbles.png'
 import Ball from '../images/level3/Ball.png'
-import Fan from '../images/level3/Fan.png'
+import Fan from '../images/level3/Fan.gif'
 import Spot from './Spotlight.js'
 import Score from '../score/Score.js'
 import Countdown from 'react-countdown-now';
 import Gameover1 from '../score/Gameover.js'
+
+
 
 
 
@@ -32,6 +34,7 @@ export default class Level3 extends React.Component {
 	render() {
 		return (
 				<Scene>
+				 
 					<Sobject name={'room'} xPos={0} yPos={0}>
 						<img src={Room} height="725" width="1536" />
 					</Sobject>
@@ -57,34 +60,34 @@ export default class Level3 extends React.Component {
 						<img src={Duck} height="200" width="200"  />
 					</Sobject>
 					<Sobject name={'towel'} xPos={750} yPos={200}>
-						<img src={Towel} height="200" width="200"/>
+						<img className={'towel'} src={Towel} height="200" width="200"/>
 					</Sobject>
 					<Sobject name={'ball'} xPos={550} yPos={580}>
-						<img src={Ball} height="130" width="130"/>
+						<img src={Ball} className={'ball'} height="130" width="130"/>
 					</Sobject>
 					<Sobject name={'laundry'} xPos={490} yPos={300}>
-						<img src={Laundry} height="200" width="150"/>
+						<img src={Laundry} className={'laundry'} height="200" width="150"/>
 					</Sobject>
 					<Sobject name={'Handwash'} xPos={1100} yPos={280}>
-						<img src={Handwash} height="120" width="90"/>
+						<img src={Handwash} className={'handwash'} height="120" width="90"/>
 					</Sobject>
 					<Sobject name={'fan'} xPos={55} yPos={30}>
 						<img src={Fan} height="150" width="150"/>
 					</Sobject>
 					<Sobject name={'Shampoo'} xPos={1240} yPos={270}>
-						<img src={Shampoo} height="120" width="50" />
+						<img src={Shampoo} className={'shampoo'} height="120" width="50" />
 					</Sobject>
 					<Sobject name={'brush'} xPos={1325} yPos={360}>
 						<img src={Brush} height="40" width="120" />
 					</Sobject>
 					<Spot height={200} width={200} color={'rgba(0,0,0,0.95)'} />
-                    <Sobject name={'score'} xPos={1360} yPos={670}>
+                    <Sobject name={'score'} xPos={1360} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'score'} xPos={50} yPos={670}>
-						<h1>Timer-</h1>
+					<Sobject name={'score'} xPos={40} yPos={640}>
+						<h1  className={'score'}>Timer-</h1>
 					</Sobject>
-					<Sobject name={'score'} xPos={160} yPos={708}>
+					<Sobject name={'score'} xPos={150} yPos={678}>
 						<Countdown date={Date.now() + 336000}>
                          <Gameover1 score={this.state.count} />
                          </Countdown>

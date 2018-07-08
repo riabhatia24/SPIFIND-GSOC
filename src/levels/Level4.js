@@ -18,6 +18,8 @@ import Gameover1 from '../score/Gameover.js'
 
 
 
+
+
 export default class Level4 extends React.Component {
 	constructor(props) {
 		super(props)
@@ -29,6 +31,7 @@ export default class Level4 extends React.Component {
 	render() {
 		return (
 				<Scene>
+				  
 					<Sobject name={'room'} xPos={0} yPos={0}>
 						<img src={Room} height="725" width="1536" />
 					</Sobject>
@@ -45,7 +48,7 @@ export default class Level4 extends React.Component {
 						<img src={Oven} height="190"width="290" />
 					</Sobject>
 					<Sobject name={'dustbin'} xPos={1300} yPos={520}>
-						<img src={Dustbin} height="190"width="200" />
+						<img src={Dustbin} className={'dustbin'} height="190"width="200" />
 					</Sobject>
 					<Sobject name={'clock'} xPos={750} yPos={30}>
 						<img src={Clock} height="180" width="180" />
@@ -56,17 +59,17 @@ export default class Level4 extends React.Component {
 					<Sobject name={'teapot'} xPos={1090} yPos={285}>
 						<img src={Food} height="90" width="130"/>
 					</Sobject>
-					<Sobject name={'teapot'} xPos={1125} yPos={248}>
-						<img src={Spoon} height="70" width="100"/>
+					<Sobject name={'spoon'} xPos={1125} yPos={248}>
+						<img src={Spoon} className={'spoon'} height="70" width="100"/>
 					</Sobject>
 					<Spot height={200} width={200} color={'rgba(0,0,0,0.97)'} />
-					<Sobject name={'score'} xPos={1360} yPos={670}>
+					<Sobject name={'score'} xPos={1360} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'score'} xPos={50} yPos={670}>
-						<h1>Timer-</h1>
+					<Sobject name={'score'} xPos={40} yPos={640}>
+						<h1  className={'score'}>Timer-</h1>
 					</Sobject>
-					<Sobject name={'score'} xPos={160} yPos={708}>
+					<Sobject name={'score'} xPos={150} yPos={678}>
 						<Countdown date={Date.now() + 276000}>
                          <Gameover1 score={this.state.count} />
                          </Countdown>

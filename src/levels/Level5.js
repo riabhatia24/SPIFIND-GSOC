@@ -16,6 +16,7 @@ import Score from '../score/Score.js'
 import Countdown from 'react-countdown-now';
 import Gameover1 from '../score/Gameover.js'
 
+
 export default class Level5 extends React.Component {
 	constructor(props) {
 		super(props)
@@ -27,6 +28,7 @@ export default class Level5 extends React.Component {
 	render() {
 		return (
 				<Scene>
+				    
 					<Sobject name={'room'} xPos={0} yPos={0}>
 						<img src={Room} height="725" width="1536" />
 					</Sobject>
@@ -37,35 +39,35 @@ export default class Level5 extends React.Component {
 						<img src={Board} height="350" width="420" />
 					</Sobject>
 					<Sobject name={'wall'} xPos={30} yPos={30}>
-						<img src={Wall} height="250" width="250"/>
+						<img src={Wall} className={'wall'} height="250" width="250"/>
 					</Sobject>
 					<Sobject name={'table'} xPos={1150} yPos={450}>
 						<img src={Table} height="280"width="210" />
 					</Sobject>
 					<Sobject name={'bag'} xPos={550} yPos={560}>
-						<img src={Bag} height="150" />
+						<img src={Bag} className={'bag'} height="150" />
 					</Sobject>
 					<Sobject name={'laptop'} xPos={1210} yPos={210}>
 						<img src={Laptop} height="190"width="290" />
 					</Sobject>
 					<Sobject name={'books'} xPos={1000} yPos={205}>
-						<img src={Books} height="200" width="200"/>
+						<img src={Books} className={'books'} height="200" width="200"/>
 					</Sobject>
 					<Sobject name={'pen'} xPos={155} yPos={350}>
-						<img src={Pen} height="100" width="100" />
+						<img src={Pen} className={'pen'} height="100" width="100" />
 					</Sobject>
 					<Sobject name={'juice'} xPos={1210} yPos={380}>
-						<img src={Juice} height="110" width="80" />
+						<img src={Juice} className={'juice'} height="110" width="80" />
 					</Sobject>
 					<Spot height={200} width={200} color={'rgba(0,0,0,0.98)'} />
-					<Sobject name={'score'} xPos={1360} yPos={670}>
+					<Sobject name={'score'} xPos={1360} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'score'} xPos={50} yPos={670}>
-						<h1>Timer-</h1>
+					<Sobject name={'score'} xPos={40} yPos={640}>
+						<h1  className={'score'}>Timer-</h1>
 					</Sobject>
-					<Sobject name={'score'} xPos={160} yPos={708}>
-						<Countdown date={Date.now() + 150000}>
+					<Sobject name={'score'} xPos={150} yPos={678}>
+						<Countdown date={Date.now() + 5000}>
                          <Gameover1 score={this.state.count} />
                          </Countdown>
 
