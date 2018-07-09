@@ -1,4 +1,4 @@
-**Copyright/permission notices for images and gifs **
+Copyright/permission notices for images and gifs
 
 =================================================================================
 
