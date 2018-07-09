@@ -16,13 +16,16 @@ class Htp1 extends React.Component {
 	constructor(props) {
 		super(props)
 	}
-    link1(){
-	this.interval=setTimeout(() =>this.props.history.push('/htp2'), 3500)
+    link1(e){
+    e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/htp2'), 3000)
     }
-    link2(){
-	this.interval=setTimeout(() =>this.props.history.push('/'), 3500)
+    link2(e){
+    e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/'), 3000)
     }
-    remove(){
+    remove(e){
+    	 e.stopPropagation();
 		clearTimeout(this.interval)
 	}
 	

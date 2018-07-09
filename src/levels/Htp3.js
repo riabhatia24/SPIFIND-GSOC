@@ -17,15 +17,18 @@ class Htp3 extends React.Component {
 	constructor(props) {
 		super(props)
 	}
-    link1(){
-	this.interval=setTimeout(() =>this.props.history.push('/'), 3500)
+    link1(e){
+     e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/'), 3000)
 	console.log('mouseenter')
     }
-    link2(){
-	this.interval=setTimeout(() =>this.props.history.push('/level1'), 3500)
+    link2(e){
+     e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/level1'), 3000)
 	
     }
-    remove(){
+    remove(e){
+    	 e.stopPropagation();
 		clearTimeout(this.interval)
 		console.log('mouseleave')
 	}

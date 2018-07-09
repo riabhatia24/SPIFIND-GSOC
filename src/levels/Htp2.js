@@ -16,15 +16,18 @@ class Htp2 extends React.Component {
 	constructor(props) {
 		super(props)
 	}
-    link1(){
-	this.interval=setTimeout(() =>this.props.history.push('/htp3'), 3500)
+    link1(e){
+     e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/htp3'), 3000)
 	console.log('mouseenter')
     }
-    link2(){
-	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 3500)
+    link2(e){
+    e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 3000)
 	console.log('mouseenter')
     }
-    remove(){
+    remove(e){
+    	e.stopPropagation();
 		clearTimeout(this.interval)
 		console.log('mouseleave')
 	}

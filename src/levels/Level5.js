@@ -67,7 +67,7 @@ export default class Level5 extends React.Component {
 						<h1  className={'score'}>Timer-</h1>
 					</Sobject>
 					<Sobject name={'score'} xPos={150} yPos={678}>
-						<Countdown date={Date.now() + 5000}>
+						<Countdown date={Date.now() + 18000}>
                          <Gameover1 score={this.state.count} />
                          </Countdown>
 

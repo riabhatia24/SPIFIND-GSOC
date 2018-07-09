@@ -19,26 +19,40 @@ class Intro extends React.Component {
 		super(props)
 	}
 
-    link(){
+    link(e){
+
+
+
+
+
+
+    	 e.stopPropagation();
 	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 3500)
     }
-    link1(){
-	this.interval=setTimeout(() =>this.props.history.push('/level1'), 3500)
+    link1(e){
+    e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/level1'), 3000)
     }
-    link2(){
-	this.interval=setTimeout(() =>this.props.history.push('/level2'), 3500)
+    
+    link2(e){
+    e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/level2'), 3000)
     }
-    link3(){
-	this.interval=setTimeout(() =>this.props.history.push('/level3'), 35000)
+    link3(e){
+    e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/level3'), 3000)
     }
-    link4(){
-	this.interval=setTimeout(() =>this.props.history.push('/level4'), 3500)
+    link4(e){
+     e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/level4'), 3000)
     }
-    link5(){
-	this.interval=setTimeout(() =>this.props.history.push('/level5'), 3500)
+    link5(e){
+    e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/level5'), 3000)
     }
-    remove(){
-		clearTimeout(this.interval)
+    remove(e){
+    e.stopPropagation();
+    clearTimeout(this.interval)
 	}
 	
 	render() {
