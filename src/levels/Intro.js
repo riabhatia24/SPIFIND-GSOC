@@ -20,13 +20,7 @@ class Intro extends React.Component {
 	}
 
     link(e){
-
-
-
-
-
-
-    	 e.stopPropagation();
+     e.stopPropagation();
 	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 3500)
     }
     link1(e){
@@ -62,7 +56,7 @@ class Intro extends React.Component {
 				<Scene>
 				    <ReactAudioPlayer src={Title} controls loop volume={0.2} autoPlay/>
 				    <Sobject name={'main'} xPos={0} yPos={0}>
-						<img className="image" src={Main} height="755" width="1536" />
+						<img className="image" src={Main} height="725" width="1536" />
 					</Sobject>
 					<Sobject name={'house'} xPos={960} yPos={180}>
 						<img src={House} height="575" width="575"  />
