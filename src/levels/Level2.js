@@ -13,17 +13,25 @@ import Spot from './Spotlight.js'
 import Score from '../score/Score.js'
 import Countdown from 'react-countdown-now';
 import Gameover1 from '../score/Gameover.js'
+import { withRouter } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
-
-
-
-export default class Level2 extends React.Component {
+class Level2 extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			count: 0
 		}
+	}
+
+	 link(e){
+    e.stopPropagation();
+	this.interval=setTimeout(() =>this.props.history.push('/'), 3000)
+    }
+    remove(e){
+    e.stopPropagation();
+    clearTimeout(this.interval)
 	}
 
 	render() {
@@ -58,6 +66,9 @@ export default class Level2 extends React.Component {
 					<Sobject name={'score'} xPos={1360} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
+					<Sobject name={'score'} xPos={700} yPos={665}>
+						<Link to="/"><button onMouseEnter={this.link.bind(this)} onMouseLeave={this.remove.bind(this)} className={'quit'}>Quit</button></Link>
+					</Sobject>
 					<Sobject name={'score'} xPos={40} yPos={640}>
 						<h1  className={'score'}>Timer-</h1>
 					</Sobject>
@@ -75,3 +86,6 @@ export default class Level2 extends React.Component {
 			)
 	}
 }
+
+export default withRouter(Level2)
+
