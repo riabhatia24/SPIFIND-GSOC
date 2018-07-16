@@ -23,14 +23,18 @@ import ReactCountdownClock from 'react-countdown-clock'
 
 
 
+
 class Level1 extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			count: 0,
-			show: false
+			show: false,
+			play: false
 			
 		}
+		this.sound= "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
+		this.audio = new Audio(this.sound)
 	}
      
     onCompleteCallBack = () => {
@@ -48,7 +52,8 @@ class Level1 extends React.Component {
 
 	clicked(){
 		 
-		this.setState({count: this.state.count + 1 })
+		this.setState({count: this.state.count + 1, play: true })
+		this.audio.play();
 	}
 	
     
