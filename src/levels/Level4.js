@@ -1,6 +1,8 @@
 import React from 'react'
 import Scene from '../components/Scene'
 import Sobject from '../components/Object'
+import Spot from '../components/Spotlight'
+import Spider from '../components/Spider'
 import Room from '../images/level4/Room.png'
 import Clock from '../images/level4/Clock.gif'
 import Dustbin from '../images/level4/Dustbin.png'
@@ -9,23 +11,27 @@ import Sticker from '../images/level4/Sticker.png'
 import Table from '../images/level4/Table.png'
 import Refrigerator from '../images/level4/Refrigerator.png'
 import Cup from '../images/level4/Cup.gif'
-import Spot from './Spotlight.js'
 import Food from '../images/level4/Food.png'
 import Spoon from '../images/level4/Spoon.png'
 import Score from '../score/Score.js'
-import Countdown from 'react-countdown-now';
 import Gameover1 from '../score/Gameover.js'
 import { withRouter } from 'react-router-dom'
 import {Link} from 'react-router-dom'
+import ReactCountdownClock from 'react-countdown-clock'
 
 
 class Level4 extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			count: 0
+			count: 0,
+			show: false
 		}
 	}
+
+	  onCompleteCallBack = () => {
+    this.setState({show: true })
+  }; 
 
 	 link(e){
     e.stopPropagation();
@@ -36,8 +42,14 @@ class Level4 extends React.Component {
     clearTimeout(this.interval)
 	}
 
+	clicked(){
+		  
+		this.setState({count: this.state.count + 1 })
+	}
+
 	render() {
 		return (
+			<div>
 				<Scene>
 				  
 					<Sobject name={'room'} xPos={0} yPos={0}>
@@ -70,28 +82,36 @@ class Level4 extends React.Component {
 					<Sobject name={'spoon'} xPos={1125} yPos={248}>
 						<img src={Spoon} className={'spoon'} height="70" width="100"/>
 					</Sobject>
-					<Spot height={200} width={200} color={'rgba(0,0,0,0.97)'} />
-					<Sobject name={'score'} xPos={1360} yPos={640}>
+					<Spider clicked={this.clicked.bind(this)}/>
+					<Spot height={180} width={180} color={'rgba(0,0,0,0.97)'} />
+						<Sobject name={'score'} xPos={1340} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'score'} xPos={700} yPos={665}>
-						<Link to="/"><button onMouseEnter={this.link.bind(this)} onMouseLeave={this.remove.bind(this)} className={'quit'}>Quit</button></Link>
-					</Sobject>
-					<Sobject name={'score'} xPos={40} yPos={640}>
-						<h1  className={'score'}>Timer-</h1>
-					</Sobject>
-					<Sobject name={'score'} xPos={150} yPos={678}>
-						<Countdown date={Date.now() + 276000}>
-                         <Gameover1 score={this.state.count} />
-                         </Countdown>
-
+					<Sobject name={'text'} xPos={40} yPos={665}>
+						<Link to="/"><button onClick={(e) => e.stopPropagation()} className={'quit'}>Quit</button></Link>
 					</Sobject>
 					
-				    
+                       <Sobject name={'score'} xPos={700} yPos={630}>  
+                       {!this.state.show ? (
+                         <ReactCountdownClock
+            seconds={210}
+            color="white"
+            alpha={1}
+            size={90}
+            showMilliseconds={false}
+            onComplete={this.onCompleteCallBack}
+            weight={10}
+          />
+        ) : (
+         <Gameover1 score={this.state.count} />
+        )}
+                     </Sobject>
+                    
 
+                    </Scene>
 
-
-				</Scene>
+				
+				</div>
 			)
 	}
 }

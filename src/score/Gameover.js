@@ -24,12 +24,12 @@ class Gameover1 extends React.Component{
 
 render(){
 	return <div style={{backgroundColor: '#111E6C',
-      height: '670px',
+      height: '650px',
       position: 'absolute',
-      width: '1220px', left: '0px', top: '-650px', borderRadius: '10px'}}><h1 className={'info'}>Game Over</h1>
+      width: '1300px', left: '-600px', top: '-630px', borderRadius: '10px'}}><h1 className={'info'}>Game Over</h1>
        <p style={{textAlign: 'center', fontSize: '40px', fontFamily: 'georgia', margin: '0', padding: '0'}}>Your Score is {this.props.score}</p>
-        <Link to="/"><button style={{marginLeft: '390px', marginTop: '30px', width: '400px', height: '90px'}} className={'mainbutton2'} onMouseOver={this.link.bind(this)} onMouseOut={this.remove.bind(this)}>Go to Main Menu</button></Link>
-        <img src={Spider} style={{marginLeft: '450px'}}height="300" width="300"/> 
+        <Link to="/"><button style={{marginLeft: '450px', marginTop: '30px', width: '400px', height: '90px'}} className={'mainbutton2'} onClick={(e) => e.stopPropagation()}>Go to Main Menu</button></Link>
+        <img src={Spider} style={{marginLeft: '500px'}}height="300" width="300"/> 
       
 
       </div>

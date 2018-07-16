@@ -66,12 +66,12 @@ class Htp3 extends React.Component {
 					</Sobject>
 					<Link to="/htp2">
 					<Sobject name={'info'} xPos={30} yPos={285}>
-						<button className={'button2'} onMouseEnter={this.link1.bind(this)} onMouseLeave={this.remove.bind(this)}>&larr; BACK</button>
+						<button className={'button2'} onClick={(e) => e.stopPropagation()} >&larr; BACK</button>
 					</Sobject>
 					</Link>
 					<Link to="/level1">
 					<Sobject name={'info'} xPos={1100} yPos={285}>
-						<button className={'button2'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>LEVEL-1 &rarr;</button>
+						<button className={'button2'} onClick={(e) => e.stopPropagation()} >LEVEL-1 &rarr;</button>
 					</Sobject>
 					</Link>
 					<Sobject name={'info'} xPos={1290} yPos={0}>

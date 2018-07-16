@@ -90,7 +90,7 @@ class Intro extends React.Component {
                 
                       <Link to="/htp1">
                       <Sobject name={'playnow'} xPos={570} yPos={165}>
-						 <button className={'mainbutton1'} onMouseEnter={this.link.bind(this)} onMouseLeave={this.remove.bind(this)}>How to Play?</button>
+						 <button className={'mainbutton1'} onClick={(e) => e.stopPropagation()} >How to Play?</button>
 						</Sobject>
                       </Link>
                        <Sobject name={'spider'} xPos={529} yPos={148}>
@@ -99,33 +99,33 @@ class Intro extends React.Component {
                       <Link to="/level1">
                       <Sobject name={'playnow'} xPos={618} yPos={290}>
 						
-						<button className={'mainbutton2'} onMouseEnter={this.link1.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-1</button>
+						<button className={'mainbutton2'} onClick={(e) => e.stopPropagation()}>Level-1</button>
                       </Sobject>
                       </Link>
                       <Link to="/level2">
                       <Sobject name={'playnow'} xPos={618} yPos={380}>
 						
-						<button className={'mainbutton2'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-2</button>
+						<button className={'mainbutton2'} onClick={(e) => e.stopPropagation()} >Level-2</button>
                       </Sobject>
                       </Link>
                       <Link to="/level3">
                       <Sobject name={'playnow'} xPos={618} yPos={470}>
 						
-						<button className={'mainbutton2'} onMouseEnter={this.link3.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-3</button>
+						<button className={'mainbutton2'} onClick={(e) => e.stopPropagation()}>Level-3</button>
                       </Sobject>
                       </Link>
                       
                       <Link to="/level4">
                       <Sobject name={'playnow'} xPos={618} yPos={560}>
 						
-						<button className={'mainbutton2'} onMouseEnter={this.link4.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-4</button>
+						<button className={'mainbutton2'} onClick={(e) => e.stopPropagation()}>Level-4</button>
                       </Sobject>
                       </Link>
                       
                       <Link to="/level5">
                        <Sobject name={'playnow'} xPos={618} yPos={650}>
 						
-						<button className={'mainbutton2'} onMouseEnter={this.link5.bind(this)} onMouseLeave={this.remove.bind(this)}>Level-5</button>
+						<button className={'mainbutton2'} onClick={(e) => e.stopPropagation()}>Level-5</button>
                       </Sobject>
                       </Link>
                      

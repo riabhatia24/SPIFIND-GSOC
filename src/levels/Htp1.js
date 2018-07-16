@@ -57,13 +57,13 @@ class Htp1 extends React.Component {
 					
 					<Link to="/htp2">
 					<Sobject name={'htp'} xPos={1305} yPos={35}>
-						<button className={'button'} onMouseEnter={this.link1.bind(this)} onMouseLeave={this.remove.bind(this)}>NEXT &rarr;</button>
+						<button className={'button'} onClick={(e) => e.stopPropagation()} >NEXT &rarr;</button>
 					</Sobject>
 					</Link>
 
 					<Link to="/">
                     <Sobject name={'htp'} xPos={15} yPos={35}>
-						<button className={'button'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>&larr; BACK</button>
+						<button className={'button'} onClick={(e) => e.stopPropagation()}>&larr; BACK</button>
 					</Sobject>
 					</Link>
                    

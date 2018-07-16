@@ -10,20 +10,18 @@ import Htp from '../images/htp/Heading2.png'
 import {Link} from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
 
-
-
 class Htp2 extends React.Component {
 	constructor(props) {
 		super(props)
 	}
     link1(e){
      e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/htp3'), 3000)
+	this.interval= setTimeout(() =>this.props.history.push('/htp3'), 3000)
 	console.log('mouseenter')
     }
     link2(e){
     e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 3000)
+	this.interval= setTimeout(() =>this.props.history.push('/htp1'), 3000)
 	console.log('mouseenter')
     }
     remove(e){
@@ -60,13 +58,13 @@ class Htp2 extends React.Component {
 					
 					<Link to="/htp3">
 					<Sobject name={'htp'} xPos={1305} yPos={35}>
-						<button className={'button'} onMouseEnter={this.link1.bind(this)} onMouseLeave={this.remove.bind(this)}>NEXT &rarr;</button>
+						<button className={'button'} onClick={(e) => e.stopPropagation()} >NEXT &rarr;</button>
 					</Sobject>
 					</Link>
 
 					<Link to="/htp1">
                     <Sobject name={'htp'} xPos={15} yPos={35}>
-						<button className={'button'} onMouseEnter={this.link2.bind(this)} onMouseLeave={this.remove.bind(this)}>&larr; BACK</button>
+						<button className={'button'} onClick={(e) => e.stopPropagation()}>&larr; BACK</button>
 					</Sobject>
 					</Link>
                    
