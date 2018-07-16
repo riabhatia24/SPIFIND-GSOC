@@ -54,7 +54,7 @@ class Intro extends React.Component {
 			    <div>
 
 				<Scene>
-				    <ReactAudioPlayer src={Title} controls loop volume={0.2} autoPlay/>
+				    <ReactAudioPlayer src={Title} controls loop volume={0.2} autoPlay style={{display: 'none'}}/>
 				    <Sobject name={'main'} xPos={0} yPos={0}>
 						<img className="image" src={Main} height="725" width="1536" />
 					</Sobject>
