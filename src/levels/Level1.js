@@ -102,8 +102,7 @@ class Level1 extends React.Component {
 						<img src={Aqua} height="230" width="230" />
 					</Sobject>
 					<Spider clicked={this.clicked.bind(this)} />
-		            <Spider clicked={this.clicked.bind(this)} />
-					
+		           
 					
 					 <Spot height={180} width={180} color={'rgba(0,0,0,0.91)'} />
 					<Sobject name={'score'} xPos={1340} yPos={640}>
