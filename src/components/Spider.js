@@ -23,7 +23,7 @@ export default class Spider extends React.Component {
         x: Math.floor((Math.random() * 1200 + Math.random() * 10)),
       y: Math.floor(Math.random() * 550 + Math.random() * 10),
       m: 1
-    }), 5000)
+    }), 4000)
              })
   
      
