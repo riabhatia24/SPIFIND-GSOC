@@ -1,5 +1,5 @@
 import React from "react";
-import Sprite from '../images/Spider/Spider.gif';
+import Sprite from '../images/Spider/Spider2.gif';
 
 
 export default class Spider extends React.Component {
@@ -7,7 +7,7 @@ export default class Spider extends React.Component {
     super(props);
 
     this.state = {
-      x: Math.floor(Math.random() * 1200 + Math.random() * 10),
+      x: Math.floor(Math.random() * 1350 + Math.random() * 10),
       y: Math.floor(Math.random() * 550 + Math.random() * 10),
       m: 1,
 
@@ -20,7 +20,7 @@ export default class Spider extends React.Component {
     this.setState({
      m: 0
     }, () => {setTimeout(() => this.setState({ 
-        x: Math.floor((Math.random() * 1200 + Math.random() * 10)),
+        x: Math.floor((Math.random() * 1350 + Math.random() * 10)),
       y: Math.floor(Math.random() * 550 + Math.random() * 10),
       m: 1
     }), 4000)
@@ -51,7 +51,7 @@ export default class Spider extends React.Component {
 
       >
         
-        <img src={Sprite} height="120" width="120" onClick={this.props.clicked} />
+        <img src={Sprite} height="150" width="150" onClick={this.props.clicked} />
         </div>
         </div>
     );
