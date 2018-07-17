@@ -28,10 +28,10 @@ render(){
 	return <div style={{backgroundColor: '#111E6C',
       height: '650px',
       position: 'absolute',
-      width: '1300px', left: '-600px', top: '-630px', borderRadius: '10px'}}><h1 className={'info'}>Game Over</h1>
+      width: '1450px', left: '-670px', top: '-630px', borderRadius: '10px'}}><h1 className={'info'}>Game Over</h1>
        <p style={{textAlign: 'center', fontSize: '40px', fontFamily: 'georgia', margin: '0', padding: '0'}}>Your Score is {this.props.score}</p>
-        <Link to="/"><button style={{marginLeft: '450px', marginTop: '30px', width: '400px', height: '90px'}} className={'mainbutton2'} onClick={(e) => e.stopPropagation()}>Go to Main Menu</button></Link>
-        <img src={Spider} style={{marginLeft: '500px'}}height="300" width="300"/> 
+        <Link to="/"><button style={{marginLeft: '540px', marginTop: '30px', width: '400px', height: '90px'}} className={'mainbutton2'} onClick={(e) => e.stopPropagation()}>Go to Main Menu</button></Link>
+        <img src={Spider} style={{marginLeft: '600px'}}height="300" width="300"/> 
           <ReactAudioPlayer src={Gameover} controls volume={0.6} autoPlay style={{display: 'none'}}/>
 
       
