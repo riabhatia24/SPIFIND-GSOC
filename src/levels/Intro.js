@@ -10,7 +10,6 @@ import Spider1 from '../images/intro/Spi.gif'
 import Spider2 from '../images/intro/spider1.png'
 import {Link} from 'react-router-dom'
 import ReactAudioPlayer from 'react-audio-player'
-import Title from '../audio/Title.mp3'
 import { withRouter } from 'react-router-dom'
 
 
@@ -54,7 +53,7 @@ class Intro extends React.Component {
 			    <div>
 
 				<Scene>
-				    <ReactAudioPlayer src={Title} controls loop volume={0.2} autoPlay style={{display: 'none'}}/>
+				   
 				    <Sobject name={'main'} xPos={0} yPos={0}>
 						<img className="image" src={Main} height="725" width="1536" />
 					</Sobject>
