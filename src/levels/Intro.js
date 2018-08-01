@@ -9,44 +9,15 @@ import Heading2 from '../images/intro/Heading2.png'
 import Spider1 from '../images/intro/Spi.gif'
 import Spider2 from '../images/intro/spider1.png'
 import {Link} from 'react-router-dom'
-import ReactAudioPlayer from 'react-audio-player'
-import { withRouter } from 'react-router-dom'
 
 
-class Intro extends React.Component {
+
+export default class Intro extends React.Component {
 	constructor(props) {
 		super(props)
 	}
 
-    link(e){
-     e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/htp1'), 3500)
-    }
-    link1(e){
-    e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/level1'), 3000)
-    }
     
-    link2(e){
-    e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/level2'), 3000)
-    }
-    link3(e){
-    e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/level3'), 3000)
-    }
-    link4(e){
-     e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/level4'), 3000)
-    }
-    link5(e){
-    e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/level5'), 3000)
-    }
-    remove(e){
-    e.stopPropagation();
-    clearTimeout(this.interval)
-	}
 	
 	render() {
 		return (
@@ -55,10 +26,13 @@ class Intro extends React.Component {
 				<Scene>
 				   
 				    <Sobject name={'main'} xPos={0} yPos={0}>
-						<img className="image" src={Main} height="725" width="1536" />
+						<img className="image" src={Main} height="725" width="1495" />
 					</Sobject>
-					<Sobject name={'house'} xPos={960} yPos={180}>
-						<img src={House} height="575" width="575"  />
+					<Sobject name={'grass'} xPos={1080} yPos={435}>
+						<img src={Grass}  height="300" />
+					</Sobject>
+					<Sobject name={'house'} xPos={960} yPos={230}>
+						<img src={House} height="505" width="510"  />
 					</Sobject>
 					<Sobject name={'tree'} xPos={15} yPos={160} >
 						<img src={Tree}  />
@@ -79,9 +53,7 @@ class Intro extends React.Component {
 					<Sobject name={'grass'} xPos={730} yPos={455}>
 						<img src={Grass}  height="300" />
 					</Sobject>	
-					<Sobject name={'grass'} xPos={1080} yPos={455}>
-						<img src={Grass}  height="300" />
-					</Sobject>
+					
 					<Sobject name={'heading'} xPos={470} yPos={2}>
 						<img src={Heading2}  />
 					</Sobject>
@@ -141,4 +113,3 @@ class Intro extends React.Component {
 	}
 }
 
-export default withRouter(Intro)

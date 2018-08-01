@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Spot extends React.Component {
 
@@ -14,10 +15,16 @@ export default class Spot extends React.Component {
    }
 
   _onMouseMove(e) {
-    this.setState({ x: e.pageX , y: e.pageY });
+    this.setState({ x: e.pageX, y: e.pageY });
 
     
   }
+
+   componentWillUnmount(){
+    window.removeEventListener("mousemove", (e) => this._onMouseMove(e));
+  
+
+   }
 
   render() {
     const { x, y } = this.state;
@@ -27,3 +34,12 @@ export default class Spot extends React.Component {
     );
   }
 }
+
+
+Spot.propTypes = {
+
+  height: PropTypes.number,
+  width: PropTypes.number,
+  color: PropTypes.string
+}
+

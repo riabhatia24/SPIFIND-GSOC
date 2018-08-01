@@ -18,12 +18,11 @@ import Ball from '../images/level3/Ball.png'
 import Fan from '../images/level3/Fan.gif'
 import Score from '../score/Score.js'
 import Gameover1 from '../score/Gameover.js'
-import { withRouter } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import ReactCountdownClock from 'react-countdown-clock'
 
 
-class Level3 extends React.Component {
+export default class Level3 extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -31,23 +30,14 @@ class Level3 extends React.Component {
 			show: false,
 			play: false
 		}
-		this.sound= "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
+		this.sound = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
 		this.audio = new Audio(this.sound)
 	}
     
-      onCompleteCallBack = () => {
+      onCompleteCallBack() {
     this.setState({show: true })
-  }; 
+  }
 
-
-	 link(e){
-    e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/'), 3000)
-    }
-    remove(e){
-    e.stopPropagation();
-    clearTimeout(this.interval)
-	}
 
 	clicked(){
 		  
@@ -61,7 +51,7 @@ class Level3 extends React.Component {
 				<Scene>
 				 
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="725" width="1536" />
+						<img src={Room} height="725" width="1495" />
 					</Sobject>
 					<Sobject name={'seat'} xPos={30} yPos={250}>
 						<img src={Seat} height="475" />
@@ -107,7 +97,7 @@ class Level3 extends React.Component {
 					</Sobject>
 					<Spider clicked={this.clicked.bind(this)}/>
 					<Spot height={180} width={180} color={'rgba(0,0,0,0.95)'} />
-                    	<Sobject name={'score'} xPos={1340} yPos={640}>
+                    	<Sobject name={'score'} xPos={1300} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
 					<Sobject name={'text'} xPos={40} yPos={665}>
@@ -122,7 +112,7 @@ class Level3 extends React.Component {
             alpha={1}
             size={90}
             showMilliseconds={false}
-            onComplete={this.onCompleteCallBack}
+            onComplete={this.onCompleteCallBack.bind(this)}
             weight={10}
           />
         ) : (
@@ -140,4 +130,3 @@ class Level3 extends React.Component {
 }
 
 
-export default withRouter(Level3)

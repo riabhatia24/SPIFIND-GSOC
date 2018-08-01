@@ -7,40 +7,23 @@ import Grass from '../images/intro/Grass.png'
 import Ready from '../images/htp/Ready1.png'
 import Board from '../images/htp/Board.gif'
 import Web from '../images/htp/Web.png'
-import { withRouter } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 
 
 
-class Htp3 extends React.Component {
+export default class Htp3 extends React.Component {
 	constructor(props) {
 		super(props)
 	}
-    link1(e){
-     e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/'), 3000)
-	console.log('mouseenter')
-    }
-    link2(e){
-     e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/level1'), 3000)
-	
-    }
-    remove(e){
-    	 e.stopPropagation();
-		clearTimeout(this.interval)
-		console.log('mouseleave')
-	}
-	
-	
+   
 	render() {
 		return (
 			    <div>
 
 				<Scene>
 				    <Sobject name={'main'} xPos={0} yPos={0}>
-						<img src={Wall} height="755" width="1536" />
+						<img src={Wall} height="755" width="1495" />
 					</Sobject>
 					<Sobject name={'house'} xPos={490} yPos={180}>
 						<img src={House} height="575" width="705"   />
@@ -65,16 +48,16 @@ class Htp3 extends React.Component {
 						<img src={Ready}/>
 					</Sobject>
 					<Link to="/htp2">
-					<Sobject name={'info'} xPos={30} yPos={285}>
+					<Sobject name={'button1'} xPos={30} yPos={285}>
 						<button className={'button2'} onClick={(e) => e.stopPropagation()} >&larr; BACK</button>
 					</Sobject>
 					</Link>
 					<Link to="/level1">
-					<Sobject name={'info'} xPos={1100} yPos={285}>
+					<Sobject name={'button2'} xPos={1080} yPos={285}>
 						<button className={'button2'} onClick={(e) => e.stopPropagation()} >LEVEL-1 &rarr;</button>
 					</Sobject>
 					</Link>
-					<Sobject name={'info'} xPos={1290} yPos={0}>
+					<Sobject name={'spider'} xPos={1290} yPos={0}>
 						<img src={Web} height="200" width="200"/>
 					</Sobject>
 					
@@ -89,4 +72,3 @@ class Htp3 extends React.Component {
 			)
 	}
 }
-export default withRouter(Htp3)

@@ -5,7 +5,7 @@ import "styles/base/_main.sass"  // Global styles
 import "styles/base/_common.sass"  // Global styles
 import "styles/base/_common2.sass"  // Global styles
 import "styles/base/_buttons.sass"  // Global styles
-import styles from "./app.sass"  // Css-module styles
+
 
 const App = () => (
   <div className='App'>

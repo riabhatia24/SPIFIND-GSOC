@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Sobject extends React.Component {
 	constructor(props) {
@@ -7,7 +8,7 @@ export default class Sobject extends React.Component {
 		this.type = 'generic'
 		this.xPos = props.xPos | 0
 		this.yPos = props.yPos | 0
-		this.isMoving = props.isMoving | false
+		
 	}
 
 	render() {
@@ -17,4 +18,13 @@ export default class Sobject extends React.Component {
 			</div>
 		)
 	}
+}
+
+
+Sobject.propTypes = {
+
+  name: PropTypes.string,
+  xPos: PropTypes.number,
+  yPos: PropTypes.number,
+
 }

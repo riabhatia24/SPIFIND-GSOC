@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types';
 
 export default class Score extends React.Component {
 	constructor(props){
@@ -13,3 +13,9 @@ export default class Score extends React.Component {
 
 
 }
+
+Score.propTypes = {
+
+  count: PropTypes.number
+}
+

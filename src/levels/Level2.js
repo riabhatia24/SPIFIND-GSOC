@@ -13,12 +13,11 @@ import Wall from '../images/level2/Wall.png'
 import Pokemon from '../images/level2/Pokemon.gif'
 import Score from '../score/Score.js'
 import Gameover1 from '../score/Gameover.js'
-import { withRouter } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import ReactCountdownClock from 'react-countdown-clock'
 
 
-class Level2 extends React.Component {
+export default class Level2 extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -26,24 +25,15 @@ class Level2 extends React.Component {
 			show: false,
 			play: false
 		}
-		this.sound= "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
+		this.sound = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
 		this.audio = new Audio(this.sound)
 	}
 
-      onCompleteCallBack = () => {
+      onCompleteCallBack() {
     this.setState({show: true })
-  }; 
+  }
 
-	 link(e){
-    e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/'), 3000)
-    }
-    remove(e){
-    e.stopPropagation();
-    clearTimeout(this.interval)
-	}
-    
-    clicked(){
+	clicked(){
 		  
 		this.setState({count: this.state.count + 1, play: true })
 		this.audio.play();
@@ -54,7 +44,7 @@ class Level2 extends React.Component {
 				<Scene>
 				     
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="725" width="1536" />
+						<img src={Room} height="725" width="1485" />
 					</Sobject>
 					<Sobject name={'sofa'} xPos={20} yPos={240}>
 						<img src={Sofa} height="445" width="890"/>
@@ -62,11 +52,11 @@ class Level2 extends React.Component {
 					<Sobject name={'wall'} xPos={30} yPos={30}>
 						<img className={'wall'} src={Wall} height="200" width="200"/>
 					</Sobject>
-                    <Sobject name={'television'} xPos={905} yPos={200}>
-						<img src={Television} width="600" height="480" />
+                    <Sobject name={'television'} xPos={855} yPos={200}>
+						<img src={Television} width="530" height="480" />
 					</Sobject>
-					<Sobject name={'pokemon'} xPos={1000} yPos={217}>
-						<img src={Pokemon} height="190" width="410"  />
+					<Sobject name={'pokemon'} xPos={940} yPos={217}>
+						<img src={Pokemon} height="190" width="360"  />
 					</Sobject>
 					<Sobject name={'cat'} xPos={890} yPos={480}>
 						<img src={Cat} width="250" height="250"/>
@@ -79,7 +69,7 @@ class Level2 extends React.Component {
 					</Sobject>
 					<Spider clicked={this.clicked.bind(this)}/>
 					<Spot height={180} width={180} color={'rgba(0,0,0,0.94)'} />
-						<Sobject name={'score'} xPos={1340} yPos={640}>
+						<Sobject name={'score'} xPos={1300} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
 					<Sobject name={'text'} xPos={40} yPos={665}>
@@ -94,7 +84,7 @@ class Level2 extends React.Component {
             alpha={1}
             size={90}
             showMilliseconds={false}
-            onComplete={this.onCompleteCallBack}
+            onComplete={this.onCompleteCallBack.bind(this)}
             weight={10}
           />
         ) : (
@@ -111,6 +101,4 @@ class Level2 extends React.Component {
 	}
 }
 
-
-export default withRouter(Level2)
 

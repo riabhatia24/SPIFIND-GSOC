@@ -15,13 +15,12 @@ import Laptop from '../images/level5/Laptop.png'
 import Bag from '../images/level5/Bag.png'
 import Score from '../score/Score.js'
 import Gameover1 from '../score/Gameover.js'
-import { withRouter } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import ReactCountdownClock from 'react-countdown-clock'
 
 
 
-class Level5 extends React.Component {
+export default class Level5 extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -29,25 +28,16 @@ class Level5 extends React.Component {
 			show: false,
 			play: false
 		}
-		this.sound= "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
+		this.sound = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
 		this.audio = new Audio(this.sound)
 		
 	}
 
-	  onCompleteCallBack = () => {
+	  onCompleteCallBack() {
     this.setState({show: true })
-  };  
+  } 
 
-    link(e){
-    e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/'), 3000)
-    }
-    remove(e){
-    e.stopPropagation();
-    clearTimeout(this.interval)
-	}
-
-	clicked(){
+    clicked(){
 		  
 		this.setState({count: this.state.count + 1, play: true })
 		this.audio.play();
@@ -60,7 +50,7 @@ class Level5 extends React.Component {
 				<Scene>
 				    
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="725" width="1536" />
+						<img src={Room} height="725" width="1495" />
 					</Sobject>
 					<Sobject name={'seat'} xPos={35} yPos={330}>
 						<img src={Seat} height="390" width="390" />
@@ -77,7 +67,7 @@ class Level5 extends React.Component {
 					<Sobject name={'bag'} xPos={550} yPos={560}>
 						<img src={Bag} className={'bag'} height="150" />
 					</Sobject>
-					<Sobject name={'laptop'} xPos={1210} yPos={210}>
+					<Sobject name={'laptop'} xPos={1200} yPos={210}>
 						<img src={Laptop} height="190"width="290" />
 					</Sobject>
 					<Sobject name={'books'} xPos={1000} yPos={205}>
@@ -91,7 +81,7 @@ class Level5 extends React.Component {
 					</Sobject>
 					<Spider clicked={this.clicked.bind(this)}/>
 					<Spot height={180} width={180} color={'rgba(0,0,0,0.98)'} />
-						<Sobject name={'score'} xPos={1340} yPos={640}>
+						<Sobject name={'score'} xPos={1300} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
 					<Sobject name={'text'} xPos={40} yPos={665}>
@@ -106,7 +96,7 @@ class Level5 extends React.Component {
             alpha={1}
             size={90}
             showMilliseconds={false}
-            onComplete={this.onCompleteCallBack}
+            onComplete={this.onCompleteCallBack.bind(this)}
             weight={10}
           />
         ) : (
@@ -125,4 +115,4 @@ class Level5 extends React.Component {
 
 
 
-export default withRouter(Level5)
+

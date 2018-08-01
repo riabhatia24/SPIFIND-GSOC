@@ -15,12 +15,11 @@ import Food from '../images/level4/Food.png'
 import Spoon from '../images/level4/Spoon.png'
 import Score from '../score/Score.js'
 import Gameover1 from '../score/Gameover.js'
-import { withRouter } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import ReactCountdownClock from 'react-countdown-clock'
 
 
-class Level4 extends React.Component {
+export default class Level4 extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -28,24 +27,15 @@ class Level4 extends React.Component {
 			show: false,
 			play: false
 		}
-		this.sound= "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
+		this.sound = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
 		this.audio = new Audio(this.sound)
 	}
 
-	  onCompleteCallBack = () => {
+	  onCompleteCallBack() {
     this.setState({show: true })
-  }; 
+  } 
 
-	 link(e){
-    e.stopPropagation();
-	this.interval=setTimeout(() =>this.props.history.push('/'), 3000)
-    }
-    remove(e){
-    e.stopPropagation();
-    clearTimeout(this.interval)
-	}
-
-	clicked(){
+	 clicked(){
 		  
 		this.setState({count: this.state.count + 1,  play: true  })
 		this.audio.play();
@@ -57,7 +47,7 @@ class Level4 extends React.Component {
 				<Scene>
 				  
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="725" width="1536" />
+						<img src={Room} height="725" width="1495" />
 					</Sobject>
 					<Sobject name={'Refrigerator'} xPos={30} yPos={140}>
 						<img src={Refrigerator} height="580" width="300" />
@@ -68,10 +58,10 @@ class Level4 extends React.Component {
 					<Sobject name={'teapot'} xPos={950} yPos={235}>
 						<img src={Cup} height="150" width="150"/>
 					</Sobject>
-					<Sobject name={'oven'} xPos={1200} yPos={220}>
+					<Sobject name={'oven'} xPos={1190} yPos={220}>
 						<img src={Oven} height="190"width="290" />
 					</Sobject>
-					<Sobject name={'dustbin'} xPos={1300} yPos={520}>
+					<Sobject name={'dustbin'} xPos={1280} yPos={520}>
 						<img src={Dustbin} className={'dustbin'} height="190"width="200" />
 					</Sobject>
 					<Sobject name={'clock'} xPos={750} yPos={30}>
@@ -88,7 +78,7 @@ class Level4 extends React.Component {
 					</Sobject>
 					<Spider clicked={this.clicked.bind(this)}/>
 					<Spot height={180} width={180} color={'rgba(0,0,0,0.97)'} />
-						<Sobject name={'score'} xPos={1340} yPos={640}>
+						<Sobject name={'score'} xPos={1300} yPos={640}>
 						<Score count={this.state.count}/>
 					</Sobject>
 					<Sobject name={'text'} xPos={40} yPos={665}>
@@ -103,7 +93,7 @@ class Level4 extends React.Component {
             alpha={1}
             size={90}
             showMilliseconds={false}
-            onComplete={this.onCompleteCallBack}
+            onComplete={this.onCompleteCallBack.bind(this)}
             weight={10}
           />
         ) : (
@@ -121,4 +111,4 @@ class Level4 extends React.Component {
 }
 
 
-export default withRouter(Level4)
+
