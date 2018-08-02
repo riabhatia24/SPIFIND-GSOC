@@ -19,7 +19,9 @@ export default class Spider extends React.Component {
   work(){
 
     this.setState({
-     m: 0
+     m: 0,
+     x: Math.floor((Math.random() * 1330 + Math.random() * 10)),
+     y: Math.floor(Math.random() * 530 + Math.random() * 10),
     }, () => {setTimeout(() => this.setState({ 
         x: Math.floor((Math.random() * 1330 + Math.random() * 10)),
       y: Math.floor(Math.random() * 530 + Math.random() * 10),

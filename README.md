@@ -34,7 +34,7 @@ Know more about eye tracking here:- http://tiny.cc/eyegaze
 
 Open the web browser to `http://localhost:8888/`
 
-## How to play the game without an eye-tracker?
+## How to play the game without the eye-tracking equipment?
 [Free eye tracking softwares](https://imotions.com/blog/free-eye-tracking-software/) like [GazePointer](https://sourceforge.net/projects/gazepointer/), [Precision Eye Mouse](https://precisiongazemouse.com/using-precision-gaze-mouse.html) can be used with an external switch or [dwell & click software](https://thinksmartbox.com/download-dwell-clicker-2/thank-you-for-downloading-dwell-clicker/) to play the game. 
 
 
