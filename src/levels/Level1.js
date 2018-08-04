@@ -32,7 +32,7 @@ export default class Level1 extends React.Component {
 			play: false
 			
 		}
-		this.sound = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
+		this.sound = "https://instaud.io/_/2vY6.mp3"
 		this.audio = new Audio(this.sound)
 	}
      
