@@ -1,5 +1,5 @@
 import React from "react";
-import Sprite from '../images/Spider/Spider2.gif';
+import Sprite from '../images/Spider/Spider4.gif';
 import PropTypes from 'prop-types';
 
 

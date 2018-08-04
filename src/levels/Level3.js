@@ -97,11 +97,11 @@ export default class Level3 extends React.Component {
 					</Sobject>
 					<Spider clicked={this.clicked.bind(this)}/>
 					<Spot height={180} width={180} color={'rgba(0,0,0,0.95)'} />
-                    	<Sobject name={'score'} xPos={1300} yPos={640}>
+                    	<Sobject name={'score'} xPos={1200} yPos={615}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'text'} xPos={40} yPos={665}>
-						<Link to="/"><button onClick={(e) => e.stopPropagation()} className={'quit'}>Quit</button></Link>
+					<Sobject name={'text'} xPos={80} yPos={645}>
+						<Link to="/"><button onClick={(e) => e.stopPropagation()} className={'quit'}><b>Quit</b></button></Link>
 					</Sobject>
 					
                        <Sobject name={'score'} xPos={700} yPos={630}>  

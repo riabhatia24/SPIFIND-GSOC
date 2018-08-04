@@ -80,7 +80,7 @@ export default class Level1 extends React.Component {
 						<img src={Car} className={'car'} height="200" width="350" />
 					</Sobject>
 					<Sobject name={'toy3'} xPos={1200} yPos={440}>
-						<img src={Horse} className={'horse'} height="230" width="240" />
+						<img src={Horse} className={'horse'} height="230" width="240"  />
 					</Sobject>
                     <Sobject name={'book'} xPos={440} yPos={330}>
 						<img src={Book} height="180" width="180" />
@@ -95,11 +95,11 @@ export default class Level1 extends React.Component {
 		           
 					
 					 <Spot height={180} width={180} color={'rgba(0,0,0,0.91)'} />
-					<Sobject name={'score'} xPos={1300} yPos={640}>
+					<Sobject name={'score'} xPos={1200} yPos={615}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'text'} xPos={40} yPos={665}>
-						<Link to="/"><button className={'quit'} onClick={(e) => e.stopPropagation()}>Quit</button></Link>
+					<Sobject name={'text'} xPos={80} yPos={645}>
+						<Link to="/"><button className={'quit'} onClick={(e) => e.stopPropagation()}><b>Quit</b></button></Link>
 					</Sobject>
 					
                        <Sobject name={'score'} xPos={700} yPos={630}>  

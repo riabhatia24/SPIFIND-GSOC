@@ -7,15 +7,52 @@ import Tree from '../images/intro/Tree.png'
 import Grass from '../images/intro/Grass.png'
 import Heading2 from '../images/intro/Heading2.png'
 import Spider1 from '../images/intro/Spi.gif'
+import ReactAudioPlayer from 'react-audio-player'
 import Spider2 from '../images/intro/spider1.png'
+import Title from '../audio/Title.mp3'
+import Wooden from '../images/intro/wooden.png'
+import Logo from '../images/intro/audio.png'
 import {Link} from 'react-router-dom'
 
 
 
 export default class Intro extends React.Component {
-	constructor(props) {
-		super(props)
+		constructor(props) {
+			super(props)
+	    this.state = {
+				play: false
+				
+		}
+
+		this.sound = "https://instaud.io/_/2vTq.mp3"
+		this.audio = new Audio(this.sound)
 	}
+
+	componentDidMount(){
+    this.setState({play: true});
+   	this.audio.play();
+  
+
+   }
+
+   hello(){
+   	
+
+   }
+
+	playIt(){
+      
+		this.setState({play: !this.state.play})
+		this.audio.play();
+		console.log('play')
+	}
+
+	pauseIt(){
+      this.setState({play: !this.state.play })
+		this.audio.pause();
+		console.log('pause')
+	}
+
 
     
 	
@@ -24,7 +61,8 @@ export default class Intro extends React.Component {
 			    <div>
 
 				<Scene>
-				   
+				  
+
 				    <Sobject name={'main'} xPos={0} yPos={0}>
 						<img className="image" src={Main} height="725" width="1495" />
 					</Sobject>
@@ -43,13 +81,17 @@ export default class Intro extends React.Component {
 					<Sobject name={'Spider'} xPos={260} yPos={400}>
 						<img src={Spider1} width="130" height="130"  />
 					</Sobject>
-					
+					<Sobject name={'wooden'} xPos={280} yPos={530}>
+						<img src={Wooden} height="200" height="200"  />
+					</Sobject>
 				    <Sobject name={'grass'} xPos={0} yPos={455}>
 						<img src={Grass} height="300"  />
 					</Sobject>
+					 
 					<Sobject name={'grass'} xPos={430} yPos={455}>
 						<img src={Grass}  height="300" />
 					</Sobject>
+					
 					<Sobject name={'grass'} xPos={730} yPos={455}>
 						<img src={Grass}  height="300" />
 					</Sobject>	
@@ -99,7 +141,13 @@ export default class Intro extends React.Component {
 						<button className={'mainbutton2'} onClick={(e) => e.stopPropagation()}>Level-5</button>
                       </Sobject>
                       </Link>
-                     
+                      <Sobject name={'playnow'} xPos={285} yPos={555}>
+						
+						<button className={'music'} onClick={this.state.play ? this.pauseIt.bind(this) : this.playIt.bind(this)}>{this.state.play ?  'MUTE' : 'UNMUTE'}</button>
+                      </Sobject>
+                      <Sobject name={'audio'} xPos={345} yPos={613}>
+						<img src={Logo} height="40" width="40" />
+					</Sobject>
 
                       
                      
