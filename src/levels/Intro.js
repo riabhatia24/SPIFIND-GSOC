@@ -7,13 +7,10 @@ import Tree from '../images/intro/Tree.png'
 import Grass from '../images/intro/Grass.png'
 import Heading2 from '../images/intro/Heading2.png'
 import Spider1 from '../images/intro/Spi.gif'
-import ReactAudioPlayer from 'react-audio-player'
 import Spider2 from '../images/intro/spider1.png'
-import Title from '../audio/Title.mp3'
 import Wooden from '../images/intro/wooden.png'
 import Logo from '../images/intro/audio.png'
 import {Link} from 'react-router-dom'
-
 
 
 export default class Intro extends React.Component {
@@ -28,17 +25,13 @@ export default class Intro extends React.Component {
 		this.audio = new Audio(this.sound)
 	}
 
-	componentDidMount(){
+	componentDidMount() {
     this.setState({play: true});
+    this.audio.volume = 0.5;
    	this.audio.play();
-  
-
    }
 
-   hello(){
-   	
-
-   }
+   
 
 	playIt(){
       
@@ -81,8 +74,8 @@ export default class Intro extends React.Component {
 					<Sobject name={'Spider'} xPos={260} yPos={400}>
 						<img src={Spider1} width="130" height="130"  />
 					</Sobject>
-					<Sobject name={'wooden'} xPos={280} yPos={530}>
-						<img src={Wooden} height="200" height="200"  />
+					<Sobject name={'board'} xPos={280} yPos={530}>
+						<img src={Wooden} height="200"  />
 					</Sobject>
 				    <Sobject name={'grass'} xPos={0} yPos={455}>
 						<img src={Grass} height="300"  />

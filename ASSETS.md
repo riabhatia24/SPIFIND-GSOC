@@ -2,7 +2,7 @@ Copyright/permission notices for images and gifs
 
 =================================================================================
 
-All the still images used for the scenes are from [Pixabay](https://pixabay.com/). They are released under [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en).
+All the still images used for the scenes are from [Pixabay](https://pixabay.com/). They are [released](https://pixabay.com/en/blog/posts/public-domain-images-what-is-allowed-and-what-is-4/) under [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en).
 
 ---------------------------------------------------------------------------------
 

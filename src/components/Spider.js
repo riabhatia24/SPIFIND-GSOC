@@ -37,7 +37,7 @@ export default class Spider extends React.Component {
     console.log(x, y, m)
 
     return (
-      <div onClick={() => console.log('hi')}>
+      <div onClick={() => console.log('spider')}>
       <div
         style={{
           
