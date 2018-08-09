@@ -76,7 +76,7 @@ export default class Level3 extends React.Component {
 				<Scene>
 				 
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="725" width="1495" />
+						<img src={Room} height="725" width="1500" />
 					</Sobject>
 					<Sobject name={'seat'} xPos={30} yPos={250}>
 						<img src={Seat} height="475" />

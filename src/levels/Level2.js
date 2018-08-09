@@ -70,7 +70,7 @@ export default class Level2 extends React.Component {
 				<Scene>
 				     
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="725" width="1495" />
+						<img src={Room} height="725" width="1500" />
 					</Sobject>
 					<Sobject name={'sofa'} xPos={20} yPos={240}>
 						<img src={Sofa} height="445" width="890"/>
