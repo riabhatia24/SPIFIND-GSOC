@@ -27,7 +27,7 @@ export default class Intro extends React.Component {
 
 	componentDidMount() {
     this.setState({play: true});
-    this.audio.volume = 0.5;
+    this.audio.loop = true;
    	this.audio.play();
    }
 
@@ -81,6 +81,7 @@ export default class Intro extends React.Component {
 						<img src={Grass} height="300"  />
 					</Sobject>
 					 
+
 					<Sobject name={'grass'} xPos={430} yPos={455}>
 						<img src={Grass}  height="300" />
 					</Sobject>

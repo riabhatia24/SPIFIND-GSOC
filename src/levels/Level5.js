@@ -16,6 +16,7 @@ import Bag from '../images/level5/Bag.png'
 import Score from '../score/Score.js'
 import Gameover1 from '../score/Gameover.js'
 import {Link} from 'react-router-dom'
+import Logo from '../images/level1/Logo.png'
 import ReactCountdownClock from 'react-countdown-clock'
 
 
@@ -26,12 +27,35 @@ export default class Level5 extends React.Component {
 		this.state = {
 			count: 0,
 			show: false,
-			play: false
+			play: false,
+			bgmusic: false
 		}
 		this.sound = "https://instaud.io/_/2vY6.mp3"
+		this.sound2 = "https://instaud.io/_/2wX7.mp3"
 		this.audio = new Audio(this.sound)
+		this.audio2 = new Audio(this.sound2)
 		
 	}
+
+	componentDidMount() {
+    this.setState({bgmusic: true});
+    this.audio2.loop = true;
+    this.audio2.play();
+   }
+
+   playIt(){
+	      
+			this.setState({bgmusic: !this.state.bgmusic})
+			this.audio2.play();
+			console.log('play')
+		}
+
+		pauseIt(){
+	      this.setState({bgmusic: !this.state.bgmusic})
+			this.audio2.pause();
+			console.log('pause')
+		}
+
 
 	  onCompleteCallBack() {
     this.setState({show: true })
@@ -88,7 +112,7 @@ export default class Level5 extends React.Component {
 						<Link to="/"><button onClick={(e) => e.stopPropagation()} className={'quit'}><b>Quit</b></button></Link>
 					</Sobject>
 					
-                       <Sobject name={'score'} xPos={700} yPos={630}>  
+                       <Sobject name={'score'} xPos={650} yPos={630}>  
                        {!this.state.show ? (
                          <ReactCountdownClock
             seconds={150}
@@ -103,6 +127,13 @@ export default class Level5 extends React.Component {
          <Gameover1 score={this.state.count} />
         )}
                      </Sobject>
+                        <Sobject name={'text'} xPos={750} yPos={630}>
+						<button className={'audio'} onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)}>{this.state.bgmusic ?  'MUTE' : 'UNMUTE'}</button>
+					</Sobject>
+					<Sobject name={'logo'} xPos={785} yPos={680}>
+						<img src={Logo} height="30" width="30" />
+					</Sobject>
+
                     
 
                     </Scene>

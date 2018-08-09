@@ -9,24 +9,29 @@ export default class Spider extends React.Component {
 
     this.state = {
       x: Math.floor(Math.random() * 1330 + Math.random() * 10),
-      y: Math.floor(Math.random() * 530 + Math.random() * 10),
+      y: Math.floor(Math.random() * 520 + Math.random() * 10),
       m: 1,
+      show: false
 
     };
   }
 
- 
+  componentDidMount() {
+    setTimeout(() => this.setState({show: true}) , 5000)
+    
+   }
+
   work(){
 
     this.setState({
      m: 0,
      x: Math.floor((Math.random() * 1330 + Math.random() * 10)),
-     y: Math.floor(Math.random() * 530 + Math.random() * 10),
+     y: Math.floor(Math.random() * 520 + Math.random() * 10),
     }, () => {setTimeout(() => this.setState({ 
         x: Math.floor((Math.random() * 1330 + Math.random() * 10)),
-      y: Math.floor(Math.random() * 530 + Math.random() * 10),
+      y: Math.floor(Math.random() * 520 + Math.random() * 10),
       m: 1
-    }), 4000)
+    }), 3500)
              })
   
      
@@ -54,7 +59,7 @@ export default class Spider extends React.Component {
 
       >
         
-        <img src={Sprite} height="170" width="170" onClick={this.props.clicked} />
+      {this.state.show ? <img src={Sprite} height="170" width="170" onClick={this.props.clicked} /> : null}
         </div>
         </div>
     );
