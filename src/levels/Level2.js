@@ -70,7 +70,7 @@ export default class Level2 extends React.Component {
 				<Scene>
 				     
 					<Sobject name={'room'} xPos={0} yPos={0}>
-						<img src={Room} height="725" width="1485" />
+						<img src={Room} height="725" width="1495" />
 					</Sobject>
 					<Sobject name={'sofa'} xPos={20} yPos={240}>
 						<img src={Sofa} height="445" width="890"/>
@@ -121,7 +121,7 @@ export default class Level2 extends React.Component {
 						<button className={'audio'} onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)}>{this.state.bgmusic ?  'MUTE' : 'UNMUTE'}</button>
 					</Sobject>
 					<Sobject name={'logo'} xPos={785} yPos={680}>
-						<img src={Logo} height="30" width="30" />
+						<img src={Logo} height="30" width="30" onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)} />
 					</Sobject>
 
 

@@ -148,7 +148,7 @@ export default class Level3 extends React.Component {
 						<button className={'audio'} onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)}><b>{this.state.bgmusic ?  'MUTE' : 'UNMUTE'}</b></button>
 					</Sobject>
 					<Sobject name={'logo'} xPos={785} yPos={680}>
-						<img src={Logo} height="30" width="30" />
+						<img src={Logo} height="30" width="30" onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)} />
 					</Sobject>
 
                     
