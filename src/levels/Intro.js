@@ -24,14 +24,12 @@ export default class Intro extends React.Component {
 		this.sound = "https://instaud.io/_/2vTq.mp3"
 		this.audio = new Audio(this.sound)
 	}
-
 	
-
-   
 
 	playIt(){
       
 		this.setState({play: !this.state.play})
+		this.audio.loop = true 
 		this.audio.play();
 		console.log('play')
 	}

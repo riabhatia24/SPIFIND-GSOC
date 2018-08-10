@@ -17,11 +17,11 @@ export default class Spider extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({show: true}) , 5000)
+    setTimeout(() => this.setState({show: true}), 5000)
     
    }
 
-  work(){
+  changePos(){
 
     this.setState({
      m: 0,
@@ -54,7 +54,7 @@ export default class Spider extends React.Component {
 
         
         }}
-        onClick={this.work.bind(this)}
+        onClick={this.changePos.bind(this)}
        
 
       >

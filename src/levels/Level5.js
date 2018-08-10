@@ -108,29 +108,29 @@ export default class Level5 extends React.Component {
 						<Sobject name={'score'} xPos={1200} yPos={615}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'text'} xPos={80} yPos={645}>
+					<Sobject name={'quit-button'} xPos={80} yPos={645}>
 						<Link to="/"><button onClick={(e) => e.stopPropagation()} className={'quit'}><b>Quit</b></button></Link>
 					</Sobject>
 					
-                       <Sobject name={'score'} xPos={650} yPos={630}>  
+                       <Sobject name={'timer'} xPos={650} yPos={630}>  
                        {!this.state.show ? (
                          <ReactCountdownClock
-            seconds={150}
-            color="white"
-            alpha={1}
-            size={90}
-            showMilliseconds={false}
-            onComplete={this.onCompleteCallBack.bind(this)}
-            weight={10}
-          />
-        ) : (
-         <Gameover1 score={this.state.count} />
-        )}
+				            seconds={152}
+				            color="white"
+				            alpha={1}
+				            size={90}
+				            showMilliseconds={false}
+				            onComplete={this.onCompleteCallBack.bind(this)}
+				            weight={10}
+				          />
+				        ) : (
+				         <Gameover1 score={this.state.count} />
+				        )}
                      </Sobject>
-                        <Sobject name={'text'} xPos={750} yPos={630}>
+                        <Sobject name={'mute-button'} xPos={750} yPos={630}>
 						<button className={'audio'} onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)}>{this.state.bgmusic ?  'MUTE' : 'UNMUTE'}</button>
 					</Sobject>
-					<Sobject name={'logo'} xPos={785} yPos={680}>
+					<Sobject name={'audio-logo'} xPos={785} yPos={680}>
 						<img src={Logo} height="30" width="30" onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)} />
 					</Sobject>
 

@@ -1,13 +1,12 @@
 import React from 'react'
 import Scene from '../components/Scene'
 import Sobject from '../components/Object'
-import Test from '../images/htp/Tuitorial1.gif'
-import Ted from '../images/htp/Bear1.gif'
+import Ted from '../images/htp/Tuitorial1.gif'
 import Wall from '../images/htp/wallpaper.png'
 import Info from '../images/htp/Step.png'
 import Htp from '../images/htp/Heading.png'
 import {Link} from 'react-router-dom'
-import Black from '../images/htp/Black.png'
+
 
 
 
@@ -25,17 +24,13 @@ export default class Htp1 extends React.Component {
 
 				<Scene>
 				    <Sobject name={'main'} xPos={0} yPos={0}>
-						<img src={Wall} height="755" width="1495" />
+						<img src={Wall} height="740" width="1495" />
 					</Sobject>
-					<Sobject name={'black'} xPos={30} yPos={198}>
-						<img src={Black} height="500" width="920" />
+					
+					 <Sobject name={'ted'} xPos={30} yPos={130}>
+						<img src={Ted} height="600" width="1434" />
 					</Sobject>
-					 <Sobject name={'ted'} xPos={950} yPos={220}>
-						<img src={Ted} height="420" width="524" />
-					</Sobject>
-					 <Sobject name={'test'} xPos={30} yPos={198}>
-						<img src={Test} height="500" width="894" />
-					</Sobject>
+					 
 					<Sobject name={'htp'} xPos={570} yPos={10}>
 						<img src={Htp}/>
 					</Sobject>

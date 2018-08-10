@@ -84,13 +84,13 @@ export default class Level3 extends React.Component {
 					<Sobject name={'Bathtub'} xPos={920} yPos={400}>
 						<img src={Bathtub} width="560"  />
 					</Sobject>
-					<Sobject name={'sbubbles'} xPos={995} yPos={340}>
+					<Sobject name={'still-bubbles'} xPos={995} yPos={340}>
 						<img src={Still} height="180" width="180"  />
 					</Sobject>
 					<Sobject name={'bubbles'} xPos={1005} yPos={300}>
 						<img src={Bubbles} height="200" width="200"  />
 					</Sobject>
-					<Sobject name={'sbubbles'} xPos={1200} yPos={360}>
+					<Sobject name={'still-bubbles'} xPos={1200} yPos={360}>
 						<img src={Still} height="180" width="180"  />
 					</Sobject>
 					<Sobject name={'bubbles'} xPos={1205} yPos={300}>
@@ -125,29 +125,29 @@ export default class Level3 extends React.Component {
                     	<Sobject name={'score'} xPos={1200} yPos={615}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'text'} xPos={80} yPos={645}>
+					<Sobject name={'quit-button'} xPos={80} yPos={645}>
 						<Link to="/"><button onClick={(e) => e.stopPropagation()} className={'quit'}><b>Quit</b></button></Link>
 					</Sobject>
 					
-                       <Sobject name={'score'} xPos={650} yPos={630}>  
+                       <Sobject name={'timer'} xPos={650} yPos={630}>  
                        {!this.state.show ? (
                          <ReactCountdownClock
-            seconds={270}
-            color="white"
-            alpha={1}
-            size={90}
-            showMilliseconds={false}
-            onComplete={this.onCompleteCallBack.bind(this)}
-            weight={10}
-          />
-        ) : (
-         <Gameover1 score={this.state.count} />
-        )}
+				            seconds={272}
+				            color="white"
+				            alpha={1}
+				            size={90}
+				            showMilliseconds={false}
+				            onComplete={this.onCompleteCallBack.bind(this)}
+				            weight={10}
+					          />
+					        ) : (
+					         <Gameover1 score={this.state.count} />
+					        )}
                      </Sobject>
-                     <Sobject name={'text'} xPos={750} yPos={630}>
+                     <Sobject name={'mute-button'} xPos={750} yPos={630}>
 						<button className={'audio'} onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)}><b>{this.state.bgmusic ?  'MUTE' : 'UNMUTE'}</b></button>
 					</Sobject>
-					<Sobject name={'logo'} xPos={785} yPos={680}>
+					<Sobject name={'audio-logo'} xPos={785} yPos={680}>
 						<img src={Logo} height="30" width="30" onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)} />
 					</Sobject>
 

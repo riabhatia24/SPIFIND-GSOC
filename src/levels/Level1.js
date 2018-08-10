@@ -23,7 +23,6 @@ import ReactCountdownClock from 'react-countdown-clock'
 
 
 
-
 export default class Level1 extends React.Component {
 	constructor(props) {
 		super(props)
@@ -38,41 +37,37 @@ export default class Level1 extends React.Component {
 		this.sound2 = "https://instaud.io/_/2wX7.mp3"
 		this.audio = new Audio(this.sound)
 		this.audio2 = new Audio(this.sound2)
-	}
+		}
      
-    componentDidMount() {
-    this.setState({bgmusic: true});
-    this.audio2.loop = true;
-    this.audio2.play();
-   }
+    	componentDidMount() {
+    	this.setState({bgmusic: true});
+    	this.audio2.loop = true;
+    	this.audio2.play();
+   		}
 
-	  playIt(){
-	      
-			this.setState({bgmusic: !this.state.bgmusic})
-			this.audio2.play();
-			console.log('play')
+	  	playIt(){
+	    this.setState({bgmusic: !this.state.bgmusic})
+		this.audio2.play();
+		console.log('play')
 		}
 
 		pauseIt(){
-	      this.setState({bgmusic: !this.state.bgmusic})
-			this.audio2.pause();
-			console.log('pause')
+	    this.setState({bgmusic: !this.state.bgmusic})
+		this.audio2.pause();
+		console.log('pause')
 		}
+		
+		onCompleteCallBack() {
+    	this.setState({show: true })
+  		}
 
-
-
-    onCompleteCallBack() {
-    this.setState({show: true })
-  }
-
-	clicked(){
-		 
+		clicked(){
 		this.setState({count: this.state.count + 1, play: true })
 		this.audio.play();
-	}
+		}
 	
     
-   render() {
+  		render() {
 		return (
 			    
 			    <div>
@@ -98,13 +93,13 @@ export default class Level1 extends React.Component {
 					<Sobject name={'vase'} xPos={1000} yPos={100}>
 						<img className={'vase'} src={Vase} height="300" />
 					</Sobject>
-					<Sobject name={'duck'} xPos={40} yPos={470}>
+					<Sobject name={'bag'} xPos={40} yPos={470}>
 						<img src={Bag} height="200" />
 					</Sobject>
-					<Sobject name={'toy1'} xPos={850} yPos={520}>
+					<Sobject name={'car'} xPos={850} yPos={520}>
 						<img src={Car} className={'car'} height="200" width="350" />
 					</Sobject>
-					<Sobject name={'toy3'} xPos={1200} yPos={440}>
+					<Sobject name={'horse'} xPos={1200} yPos={440}>
 						<img src={Horse} className={'horse'} height="230" width="240"  />
 					</Sobject>
                     <Sobject name={'book'} xPos={440} yPos={330}>
@@ -117,35 +112,33 @@ export default class Level1 extends React.Component {
 						<img src={Aqua} height="230" width="230" />
 					</Sobject>
 					<Spider clicked={this.clicked.bind(this)} />
-		           
-					
-					 <Spot height={180} width={180} color={'rgba(0,0,0,0.91)'} />
+		           <Spot height={180} width={180} color={'rgba(0,0,0,0.91)'} />
 					<Sobject name={'score'} xPos={1200} yPos={615}>
 						<Score count={this.state.count}/>
 					</Sobject>
-					<Sobject name={'text'} xPos={80} yPos={645}>
+					<Sobject name={'quit-button'} xPos={80} yPos={645}>
 						<Link to="/"><button className={'quit'} onClick={(e) => e.stopPropagation()}><b>Quit</b></button></Link>
 					</Sobject>
 					
-                       <Sobject name={'score'} xPos={650} yPos={630}>  
+                       <Sobject name={'timer'} xPos={650} yPos={630}>  
                        {!this.state.show ? (
                          <ReactCountdownClock
-            seconds={390}
-            color="white"
-            alpha={1}
-            size={90}
-            showMilliseconds={false}
-            onComplete={this.onCompleteCallBack.bind(this)}
-            weight={10}
-          />
-        ) : (
-         <Gameover1 score={this.state.count} />
-        )}
+				          seconds={392}
+				          color="white"
+				          alpha={1}
+				          size={90}
+				          showMilliseconds={false}
+				          onComplete={this.onCompleteCallBack.bind(this)}
+				          weight={10}
+					          />
+					        ) : (
+					         <Gameover1 score={this.state.count} />
+        					)}
                      </Sobject>
-                    <Sobject name={'text'} xPos={750} yPos={630}>
+                    <Sobject name={'mute-button'} xPos={750} yPos={630}>
 						<button className={'audio'} onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)}>{this.state.bgmusic ?  'MUTE' : 'UNMUTE'}</button>
 					</Sobject>
-					<Sobject name={'logo'} xPos={785} yPos={680}>
+					<Sobject name={'audio-logo'} xPos={785} yPos={680}>
 						<img src={Logo} height="30" width="30" onClick={this.state.bgmusic ? this.pauseIt.bind(this) : this.playIt.bind(this)} />
 					</Sobject>
 
