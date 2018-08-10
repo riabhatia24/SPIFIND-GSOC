@@ -8,6 +8,8 @@ Know more about eye tracking here:- http://tiny.cc/eyegaze
 
 **This game is being developed as a [Google Summer of Code 2018](https://summerofcode.withgoogle.com/) project under the [Inclusive Design Institute](https://inclusivedesign.ca/).**
 
+Play game [here](https://spifind-shejyoequm.now.sh/)
+
 
 ## What are we using
 - [React 16](https://reactjs.org/) 
