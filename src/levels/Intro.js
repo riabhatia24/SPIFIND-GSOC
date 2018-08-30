@@ -10,6 +10,7 @@ import Spider1 from '../images/intro/Spi.gif'
 import Spider2 from '../images/intro/spider1.png'
 import Wooden from '../images/intro/wooden.png'
 import Logo from '../images/intro/audio.png'
+import introtrack from '../audio/Title.mp3'
 import {Link} from 'react-router-dom'
 
 
@@ -21,8 +22,7 @@ export default class Intro extends React.Component {
 				
 		}
 
-		this.sound = "https://instaud.io/_/2vTq.mp3"
-		this.audio = new Audio(this.sound)
+		this.audio = new Audio(introtrack)
 	}
 	
 

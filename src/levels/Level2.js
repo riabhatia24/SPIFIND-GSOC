@@ -15,6 +15,8 @@ import Score from '../score/Score.js'
 import Gameover1 from '../score/Gameover.js'
 import {Link} from 'react-router-dom'
 import Logo from '../images/level1/Logo.png'
+import spidersound from '../audio/Spider.mp3'
+import leveltrack from '../audio/Level.mp3'
 import ReactCountdownClock from 'react-countdown-clock'
 
 
@@ -27,10 +29,10 @@ export default class Level2 extends React.Component {
 			play: false,
 			bgmusic: false
 		}
-		this.sound = "https://instaud.io/_/2vY6.mp3"
+		
 		this.sound2 = "https://instaud.io/_/2wX7.mp3"
-		this.audio = new Audio(this.sound)
-		this.audio2 = new Audio(this.sound2)
+		this.audio = new Audio(spidersound)
+		this.audio2 = new Audio(leveltrack)
 	}
 
     componentDidMount() {
